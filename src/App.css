@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+:root {
+  --bg_main: #3435ce;
+  --bg_main_botons: #e9352b;
+  --bg_main_botons_hover: #fe5b52;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.containerLogin,
+.containerRegister {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.left {
+  width: 50%;
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.right {
+  height: 100%;
+  width: 50%;
+  background-color: var(--bg_main);
+  padding: 0 3pc;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 1pc;
+}
+.right-register {
+  height: 100%;
+  width: 50%;
+  background-color: var(--bg_main);
+  padding: 0 3pc;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.right h1 {
+  font-size: 2pc;
+}
+.logo {
+  width: 13pc;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1pc;
+}
+input[type="text"],
+input[type="password"] {
+  padding: 0.7pc;
+  border-radius: 5px;
+  border: none;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6pc;
+  width: 100%;
+}
+.form-register {
+  display: flex;
+  flex-direction: column;
+  gap: 1pc;
+  width: 100%;
+}
+.eyes {
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.6pc;
+}
+.eyes img {
+  width: 1pc;
+}
+.eyes input[type="password"] {
+  width: 33pc;
+}
+.old {
+  text-align: end;
+  padding-right: 0.6pc;
+}
+.btn {
+  margin-top: 1pc;
+  font-size: 1.5pc;
+  text-align: center;
+}
+.btn button {
+  width: 100%;
+  padding: 12px;
+  color: white;
+  background: var(--bg_main_botons);
+  border: none;
+  border-radius: 5px;
+}
+.btn button:hover {
+  background-color: var(--bg_main_botons_hover);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px) {
+  .containerRegister {
+    flex-direction: column;
+    padding: 0 1pc;
+    background-color: var(--bg_main);
   }
-  to {
-    transform: rotate(360deg);
+  .right-register {
+    width: 100%;
+    padding: 0;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    width: 100%;
+    padding: 0 1pc;
   }
 }
