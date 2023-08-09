@@ -26,15 +26,7 @@ const Register = () => {
           <h1>Iniciar Sesion</h1>
           <form className="form-register">
             <label htmlFor="" className="input">
-              Email
-              <input type="text" id="Email" placeholder="Ingresa tu email" />
-            </label>
-            <label htmlFor="" className="input">
-              Email
-              <input type="text" id="Email" placeholder="Ingresa tu email" />
-            </label>
-            <label htmlFor="" className="input">
-              Email
+              Nombre Completo
               <input type="text" id="Email" placeholder="Ingresa tu email" />
             </label>
             <label htmlFor="" className="input">
@@ -52,6 +44,21 @@ const Register = () => {
                 <img src={ojo} alt="" />
               </span>
             </label>
+            <label htmlFor="" className="input">
+              Codigo de Registro
+              <input type="text" id="Email" placeholder="Ingresa tu email" />
+            </label>
+            <label htmlFor="" className="input">
+              Universidad
+              <select>
+                <option value="Universidad 1">Universidad 1</option>
+                <option value="Universidad 2">Universidad 2</option>
+                <option value="Universidad 3">Universidad 3</option>
+                <option value="Universidad 4">Universidad 4</option>
+                <option value="Universidad 5">Universidad 5</option>
+              </select>
+            </label>
+
             <div className="btn">
               <button onClick={GoLogin}>Iniciar Secion</button>
             </div>
