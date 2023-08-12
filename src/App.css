@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   height: 100vh;
+  justify-content: center;
 }
 .left {
   width: 50%;
@@ -101,7 +102,57 @@ input[type="password"] {
 .btn button:hover {
   background-color: var(--bg_main_botons_hover);
 }
-
+.containerAdmin {
+  display: flex;
+}
+.leftAdmin {
+  width: 20%;
+  border: 1px solid green;
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1pc;
+  color: white;
+}
+.leftAdmin img {
+  width: 80%;
+}
+.rigthAdmin {
+  width: 80%;
+  height: 100vh;
+  border: 1px solid red;
+}
+.home {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 1pc;
+  gap: 8px;
+  height: 2.5pc;
+  width: 72%;
+  border-radius: 10px;
+  color: #000;
+  margin-bottom: 3pc;
+}
+.home img {
+  width: 24px;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.user img {
+  width: 24px;
+}
+.book {
+  display: flex;
+  align-items: center;
+}
+.book img {
+  width: 24px;
+}
 @media screen and (max-width: 768px) {
   .containerRegister {
     flex-direction: column;
@@ -115,7 +166,8 @@ input[type="password"] {
     display: none;
   }
   .right {
-    width: 90%;
+    width: 93%;
+    height: 101vh;
     padding: 0 1pc;
   }
 }
