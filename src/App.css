@@ -3,6 +3,12 @@
   --bg_main_botons: #e9352b;
   --bg_main_botons_hover: #fe5b52;
 }
+* {
+  outline: none;
+}
+body {
+  overflow: hidden;
+}
 .containerLogin,
 .containerRegister {
   width: 100%;
@@ -10,6 +16,34 @@
   align-items: center;
   height: 100vh;
   justify-content: center;
+}
+.lefAdmi {
+  /* border: 1px solid purple; */
+  display: flex;
+}
+.CarValue {
+  -webkit-box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+
+  border-radius: 8px;
+  padding: 0.6pc;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* font-size: 1.4pc; */
+  align-items: center;
+  /* border: 1px solid red; */
+  gap: 0.6pc;
+}
+
+.centrar {
+  display: flex;
+  align-items: center;
+  gap: 0.6pc;
+}
+.centrar img {
+  width: 5pc;
 }
 .left {
   width: 50%;
@@ -91,6 +125,14 @@ input[type="password"] {
   font-size: 1.5pc;
   text-align: center;
 }
+.containerOp {
+  display: flex;
+  flex-direction: column;
+  gap: 1pc;
+}
+.containerOp div {
+  margin-bottom: 0.5pc;
+}
 .btn button {
   width: 100%;
   padding: 12px;
@@ -105,9 +147,26 @@ input[type="password"] {
 .containerAdmin {
   display: flex;
 }
+.SecSearch {
+  width: 95%;
+  /* background-color: red; */
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.6pc;
+  padding: 0 1pc;
+  height: 4pc;
+  -webkit-box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.SecSearch img {
+  width: 2pc;
+}
 .leftAdmin {
   width: 20%;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   height: 100vh;
   background-color: blue;
   display: flex;
@@ -122,7 +181,11 @@ input[type="password"] {
 .rigthAdmin {
   width: 80%;
   height: 100vh;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  padding: 1pc;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6pc;
 }
 .home {
   background-color: white;
@@ -142,16 +205,164 @@ input[type="password"] {
 .user {
   display: flex;
   align-items: center;
+  gap: 0.6pc;
+  margin: 0.5pc 0;
+  cursor: pointer;
 }
 .user img {
   width: 24px;
 }
 .book {
+  cursor: pointer;
   display: flex;
   align-items: center;
+  gap: 0.6pc;
 }
 .book img {
   width: 24px;
+}
+.CirLive {
+  width: 1pc;
+  height: 1pc;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.containerUserLive {
+  -webkit-box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+  /* background-color: rgb(255, 176, 5); */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 59.1pc;
+  gap: 1pc;
+  padding: 0.6pc 1pc;
+  border-radius: 8px;
+  height: 28pc;
+}
+.containerUse {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 90%;
+  height: 25pc;
+  display: flex;
+  flex-direction: column;
+  gap: 1pc;
+  padding-bottom: 2pc;
+}
+.containerUserLive hr {
+  width: 90%;
+  border: 1px solid rgb(0, 0, 0);
+}
+.containerUse hr {
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0);
+}
+.UserLive {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid green; */
+  height: 2pc;
+  gap: 0.3pc;
+
+  font-size: 1.2pc;
+}
+
+.ContainercarInfo {
+  display: grid;
+  gap: 1pc;
+  padding: 0 1pc;
+  grid-template-columns: repeat(2, 1fr);
+}
+.containerUse::-webkit-scrollbar {
+  display: none;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px auto;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 25px;
+}
+
+th {
+  /* background-color: #f2f2f2; */
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e0e0e0;
+}
+.iconTable {
+  display: flex;
+  align-items: center;
+  gap: 0.6pc;
+  justify-content: center;
+}
+.containerModal {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.574);
+  backdrop-filter: blur(2px);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  /* background-color: rgb(238, 255, 0); */
+  background-color: rgb(221, 219, 219);
+  border: 1px solid rgb(0, 0, 0);
+  width: 70%;
+  height: 15pc;
+  border-radius: 6px;
+  padding: 1pc;
+  display: flex;
+  flex-direction: column;
+  gap: 1pc;
+}
+.mainModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 12pc;
+  color: red;
+}
+.mainModal hr {
+  width: 99%;
+}
+.mainModal div {
+  display: flex;
+  align-items: center;
+  gap: 1pc;
+}
+.btnClose {
+  padding: 0.3pc;
+  background: transparent;
+  border: 1px solid red;
+  border-radius: 6px;
+  color: red;
+}
+.btnTrue {
+  padding: 0.3pc;
+  background: transparent;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  color: #000000;
 }
 @media screen and (max-width: 768px) {
   .containerRegister {
