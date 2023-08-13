@@ -81,7 +81,7 @@ const MainAdmin = () => {
           </div>
         </div>
         <div className="rigthAdmin">
-          <div className="SecSearch">
+          <div className="SecSearch  ">
             <img src={menu} alt="" id="menu" onClick={ShowMenu} />
             <div>
               <img src={Lupa} alt="" />

@@ -147,7 +147,8 @@ input[type="password"] {
 .containerAdmin {
   display: flex;
 }
-.SecSearch {
+.SecSearch,
+.SecSearchAdmin {
   width: 95%;
   /* background-color: red; */
   border-radius: 7px;
@@ -161,7 +162,8 @@ input[type="password"] {
   -moz-box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
 }
-.SecSearch div {
+.SecSearch div,
+.SecSearchAdmin div {
   display: flex;
   align-items: center;
   gap: 0.6pc;
@@ -169,7 +171,8 @@ input[type="password"] {
 #menu {
   display: none;
 }
-.SecSearch img {
+.SecSearch img,
+.SecSearchAdmin img {
   width: 2pc;
 }
 .leftAdmin {
@@ -415,10 +418,17 @@ tr:hover {
     height: 101vh;
     padding: 0 1pc;
   }
+  .SecSearchAdmin {
+    justify-content: space-between;
+    padding: 1pc;
+    /* width: 34pc; */
+    width: 91%;
+  }
   .SecSearch {
     justify-content: space-between;
     padding: 1pc;
     /* width: 34pc; */
+    height: 2pc;
     width: 91%;
   }
   #menu {
@@ -434,6 +444,7 @@ tr:hover {
     flex-direction: column;
     gap: 2pc;
     padding-bottom: 1pc;
+    overflow: auto;
   }
   .containerUserLive {
     width: 91%;
