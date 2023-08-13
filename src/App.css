@@ -21,9 +21,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1pc;
-  -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+
   border-radius: 8px;
 }
 .lefAd {
@@ -33,9 +34,9 @@ body {
   border-radius: 8px;
 }
 .CarValue {
-  -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
 
   border-radius: 8px;
   padding: 0.6pc;
@@ -169,9 +170,9 @@ input[type="password"] {
   gap: 0.6pc;
   padding: 0 1pc;
   height: 4pc;
-  -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
 }
 .SecSearch div,
 .SecSearchAdmin div {
@@ -252,10 +253,9 @@ input[type="password"] {
 }
 
 .containerUserLive {
-  -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
-  /* background-color: rgb(255, 176, 5); */
+  -webkit-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   justify-content: center;
