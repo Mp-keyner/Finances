@@ -235,6 +235,21 @@ input[type="password"] {
   /* background-color: rgb(255, 176, 5); */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20pc;
+  gap: 1pc;
+  padding: 0.6pc 1pc;
+  border-radius: 8px;
+  height: 28pc;
+}
+.containerResults {
+  -webkit-box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
+  /* background-color: rgb(255, 176, 5); */
+  display: flex;
+  flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
   width: 59.1pc;

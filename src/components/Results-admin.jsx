@@ -75,7 +75,7 @@ const ResultsAdmin = () => {
             <img src={goOut} alt="" />
           </div>
           <div className="lefAdmi">
-            <div className="containerUserLive">
+            <div className="containerResults">
               Lista de usuarios
               <table>
                 <tr>
