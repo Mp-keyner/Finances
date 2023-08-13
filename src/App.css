@@ -161,6 +161,14 @@ input[type="password"] {
   -moz-box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 2px 12px 0px rgba(0, 0, 0, 0.75);
 }
+.SecSearch div {
+  display: flex;
+  align-items: center;
+  gap: 0.6pc;
+}
+#menu {
+  display: none;
+}
 .SecSearch img {
   width: 2pc;
 }
@@ -379,10 +387,21 @@ tr:hover {
   border-radius: 6px;
   color: #000000;
 }
+.xClose {
+  width: 3pc;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .containerRegister {
     flex-direction: column;
     background-color: var(--bg_main);
+  }
+  .xClose {
+    display: block;
   }
   .right-register {
     width: 90%;
@@ -395,5 +414,42 @@ tr:hover {
     width: 93%;
     height: 101vh;
     padding: 0 1pc;
+  }
+  .SecSearch {
+    justify-content: space-between;
+    padding: 1pc;
+    /* width: 34pc; */
+    width: 91%;
+  }
+  #menu {
+    display: block;
+  }
+  .leftAdmin {
+    padding-top: 4pc;
+    position: absolute;
+    width: 70%;
+    transition: all 0.5s ease-in-out;
+  }
+  .lefAdmi {
+    flex-direction: column;
+    gap: 2pc;
+    padding-bottom: 1pc;
+  }
+  .containerUserLive {
+    width: 91%;
+  }
+  /* .containerUserLive {
+    width: 34pc;
+  } */
+  .ContainercarInfo {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0;
+  }
+  body {
+    overflow: scroll;
+  }
+  .rigthAdmin {
+    width: 100%;
   }
 }

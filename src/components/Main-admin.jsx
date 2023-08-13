@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../img/finance$.svg";
 import Home from "../img/home.svg";
 import user1 from "../img/user.svg";
@@ -13,8 +13,15 @@ import candado from "../img/candado.png";
 import users from "../img/users.svg";
 import x from "../img/x.svg";
 import { motion } from "framer-motion";
+import menu from "../img/Menu.svg";
+import xClose from "../img/xClose.svg";
 
 const MainAdmin = () => {
+  const [manu, setManu] = useState(false);
+  const ShowMenu = () => {
+    console.log("ya ya ya ");
+    setManu(!manu);
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,7 +30,19 @@ const MainAdmin = () => {
       transition={{ duration: 1, delay: 0.3 }}
     >
       <section className="containerAdmin">
-        <div className="leftAdmin">
+        <div
+          className="leftAdmin"
+          style={{
+            transform: `translateX(${manu ? "-19pc" : "0pc"})`,
+          }}
+        >
+          <img
+            src={xClose}
+            alt=""
+            className="xClose"
+            onClick={ShowMenu}
+            style={{ width: "3pc" }}
+          />
           <img src={logo} alt="" />
           <div className="home">
             <img src={Home} alt="" />
@@ -63,10 +82,13 @@ const MainAdmin = () => {
         </div>
         <div className="rigthAdmin">
           <div className="SecSearch">
-            <img src={Lupa} alt="" />
-            <p>Usuario a buscar</p>
-            <img src={UserCircle} alt="" />
-            <img src={goOut} alt="" />
+            <img src={menu} alt="" id="menu" onClick={ShowMenu} />
+            <div>
+              <img src={Lupa} alt="" />
+              <p>Usuario a buscar</p>
+              <img src={UserCircle} alt="" />
+              <img src={goOut} alt="" />
+            </div>
           </div>
           <div className="lefAdmi">
             <div className="containerUserLive">
