@@ -13,6 +13,11 @@ const Register = () => {
     // Redirigir al usuario a otra parte
     navigate("/");
   };
+  const GoMain = () => {
+    // Redirigir al usuario a otra parte
+    navigate("/");
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -22,7 +27,7 @@ const Register = () => {
     >
       <section className="containerRegister">
         <div className="right-register">
-          <img src={logo} alt="" className="logo" />
+          <img src={logo} alt="" className="logo" onClick={GoMain} />
           <h1>Iniciar Sesion</h1>
           <form className="form-register">
             <label htmlFor="" className="input">

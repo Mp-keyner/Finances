@@ -15,8 +15,15 @@ import x from "../img/x.svg";
 import { motion } from "framer-motion";
 import menu from "../img/Menu.svg";
 import xClose from "../img/xClose.svg";
+import { useNavigate } from "react-router-dom";
 
 const MainAdmin = () => {
+  const navigate = useNavigate();
+
+  const GoMain = () => {
+    // Redirigir al usuario a otra parte
+    navigate("/");
+  };
   const [manu, setManu] = useState(false);
   const ShowMenu = () => {
     console.log("ya ya ya ");
@@ -43,7 +50,7 @@ const MainAdmin = () => {
             onClick={ShowMenu}
             style={{ width: "3pc" }}
           />
-          <img src={logo} alt="" />
+          <img src={logo} alt="" title="FINANCES" onClick={GoMain} />
           <div className="home">
             <img src={Home} alt="" />
             Inicio
@@ -90,7 +97,7 @@ const MainAdmin = () => {
               <img src={goOut} alt="" />
             </div>
           </div>
-          <div className="lefAdmi">
+          <div className="lefAd">
             <div className="containerUserLive">
               <h2>Lista de usuarios conectados</h2>
               <hr />
@@ -151,43 +158,41 @@ const MainAdmin = () => {
                 </div>
               </div>
             </div>
-            <div className="ContainercarInfo">
-              <div className="CarValue">
-                <div className="centrar">
-                  <img src={UserCircle} alt="" />
-                  <p>NUMEROS DE USUARIOS CONECTADOS</p>
-                </div>
-                <div className="centrar">
-                  <div className="CirLive"></div>
-                  <p style={{ fontSize: "2pc" }}>200</p>
-                </div>
+            <div className="CarValue">
+              <div className="centrar">
+                <img src={UserCircle} alt="" />
+                <p>NUMEROS DE USUARIOS CONECTADOS</p>
               </div>
-              <div className="CarValue">
-                <div className="centrar">
-                  <img src={candado} alt="" style={{ width: "4pc" }} />
-                  <p>NUMEROS DE USUARIOS CONECTADOS</p>
-                </div>
-                <div className="centrar">
-                  <p style={{ fontSize: "2pc" }}>200</p>
-                </div>
+              <div className="centrar">
+                <div className="CirLive"></div>
+                <p style={{ fontSize: "2pc" }}>200</p>
               </div>
-              <div className="CarValue">
-                <div className="centrar">
-                  <img src={users} alt="" style={{ width: "4pc" }} />
-                  <p>NUMEROS DE USUARIOS CONECTADOS</p>
-                </div>
-                <div className="centrar">
-                  <p style={{ fontSize: "2pc" }}>200</p>
-                </div>
+            </div>
+            <div className="CarValue">
+              <div className="centrar">
+                <img src={candado} alt="" style={{ width: "4pc" }} />
+                <p>NUMEROS DE USUARIOS CONECTADOS</p>
               </div>
-              <div className="CarValue">
-                <div className="centrar">
-                  <img src={x} alt="" />
-                  <p>NUMEROS DE USUARIOS CONECTADOS</p>
-                </div>
-                <div className="centrar">
-                  <p style={{ fontSize: "2pc" }}>200</p>
-                </div>
+              <div className="centrar">
+                <p style={{ fontSize: "2pc" }}>200</p>
+              </div>
+            </div>
+            <div className="CarValue">
+              <div className="centrar">
+                <img src={users} alt="" style={{ width: "4pc" }} />
+                <p>NUMEROS DE USUARIOS CONECTADOS</p>
+              </div>
+              <div className="centrar">
+                <p style={{ fontSize: "2pc" }}>200</p>
+              </div>
+            </div>
+            <div className="CarValue">
+              <div className="centrar">
+                <img src={x} alt="" />
+                <p>NUMEROS DE USUARIOS CONECTADOS</p>
+              </div>
+              <div className="centrar">
+                <p style={{ fontSize: "2pc" }}>200</p>
               </div>
             </div>
           </div>

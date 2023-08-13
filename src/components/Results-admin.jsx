@@ -16,8 +16,15 @@ import Modal from "./Modal";
 import { motion } from "framer-motion";
 import xClose from "../img/xClose.svg";
 import menu from "../img/Menu.svg";
+import { useNavigate } from "react-router-dom";
 
 const ResultsAdmin = () => {
+  const navigate = useNavigate();
+
+  const GoMain = () => {
+    // Redirigir al usuario a otra parte
+    navigate("/");
+  };
   const [manu, setManu] = useState(false);
   const ShowMenu = () => {
     console.log("ya ya ya ");
@@ -49,7 +56,7 @@ const ResultsAdmin = () => {
             onClick={ShowMenu}
             style={{ width: "3pc" }}
           />
-          <img src={logo} alt="" />
+          <img src={logo} alt="" title="FINANCES" onClick={GoMain} />
           <div className="home">
             <img src={Home} alt="" />
             Inicio
