@@ -57,6 +57,9 @@ body {
 .centrar img {
   width: 5pc;
 }
+.centrarp {
+  width: 12pc;
+}
 .left {
   width: 50%;
   height: 100%;
@@ -302,6 +305,7 @@ input[type="password"] {
   /* border: 1px solid green; */
   height: 2pc;
   gap: 0.3pc;
+  justify-content: center;
 
   font-size: 1.2pc;
 }

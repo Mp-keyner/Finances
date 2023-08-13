@@ -161,7 +161,7 @@ const MainAdmin = () => {
             <div className="CarValue">
               <div className="centrar">
                 <img src={UserCircle} alt="" />
-                <p>NUMEROS DE USUARIOS CONECTADOS</p>
+                <p className="centrarp">NUMEROS DE USUARIOS CONECTADOS</p>
               </div>
               <div className="centrar">
                 <div className="CirLive"></div>
@@ -171,7 +171,7 @@ const MainAdmin = () => {
             <div className="CarValue">
               <div className="centrar">
                 <img src={candado} alt="" style={{ width: "4pc" }} />
-                <p>NUMEROS DE USUARIOS CONECTADOS</p>
+                <p className="centrarp">NUMEROS DE LICENCIAS ACTIVAS</p>
               </div>
               <div className="centrar">
                 <p style={{ fontSize: "2pc" }}>200</p>
@@ -180,7 +180,7 @@ const MainAdmin = () => {
             <div className="CarValue">
               <div className="centrar">
                 <img src={users} alt="" style={{ width: "4pc" }} />
-                <p>NUMEROS DE USUARIOS CONECTADOS</p>
+                <p className="centrarp">NUMEROS DE USUARIOS REGISTRADOS</p>
               </div>
               <div className="centrar">
                 <p style={{ fontSize: "2pc" }}>200</p>
@@ -189,7 +189,7 @@ const MainAdmin = () => {
             <div className="CarValue">
               <div className="centrar">
                 <img src={x} alt="" />
-                <p>NUMEROS DE USUARIOS CONECTADOS</p>
+                <p className="centrarp">NUMEROS DE LICENCIAS EXPIRADAS</p>
               </div>
               <div className="centrar">
                 <p style={{ fontSize: "2pc" }}>200</p>
