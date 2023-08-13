@@ -412,6 +412,9 @@ tr:hover {
     flex-direction: column;
     background-color: var(--bg_main);
   }
+  .containerModal {
+    width: 27pc;
+  }
   .xClose {
     display: block;
   }
