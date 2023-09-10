@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import logo from "../img/logoFyba.png";
 import Home2 from "../img/home2.svg";
-import user1 from "../img/user2.svg";
+import user1 from "../img/user.svg";
 import book from "../img/book.svg";
-import edit from "../img/edit.svg";
+import edit from "../img/edit2.svg";
 import editB from "../img/edit-black.svg";
 import file from "../img/file.svg";
 import fileB from "../img/book-black.svg";
@@ -17,18 +17,16 @@ import { motion } from "framer-motion";
 import xClose from "../img/xClose.svg";
 import menu from "../img/Menu.svg";
 import { Link, useNavigate } from "react-router-dom";
-import repetir from "../img/repeat.svg";
 
-const ResultsAdmin = () => {
+const Generar = () => {
+  const [date, setDate] = useState("");
+  const [date2, setDate2] = useState("");
+  console.log(date);
   const navigate = useNavigate();
 
   const GoMain = () => {
     // Redirigir al usuario a otra parte
     navigate("/");
-  };
-  const GoEdait = () => {
-    // Redirigir al usuario a otra parte
-    navigate("/admin-edit");
   };
   const [manu, setManu] = useState(false);
   const ShowMenu = () => {
@@ -72,7 +70,7 @@ const ResultsAdmin = () => {
             <div>
               <p>cuentas</p>
               <Link to={"/result-admin"}>
-                <div className="user Activo" title="Ver usuarios">
+                <div className="user ActivoHver" title="Ver usuarios">
                   <img src={user1} alt="" />
                   <p>Ver usuarios</p>
                 </div>
@@ -86,7 +84,7 @@ const ResultsAdmin = () => {
             </div>
             <div>
               <p>Licencias</p>
-              <div className="user ActivoHver " title="Generar Codigo">
+              <div className="user Activo " title="Generar Codigo">
                 <img src={edit} alt="" />
                 <p>Generar Codigo</p>
               </div>
@@ -114,88 +112,68 @@ const ResultsAdmin = () => {
               <img src={goOut} alt="" />
             </div>
           </div>
-          <div className="lefAdmi">
-            <div className="containerResults">
-              Lista de usuarios
-              <table>
-                <tr>
-                  <th>Nombre Completo</th>
-                  <th>Universidad</th>
-                  <th>Licencia</th>
-                  <th>Acciones</th>
-                </tr>
-                <br />
-                <tr>
-                  <td>Pedro Alfonzo Molina Castillo</td>
-                  <td>Universidad Autonoma Del Caribe</td>
-                  <td>Activa</td>
-                  <td>
-                    <div className="iconTable">
-                      <img src={fileB} alt="Generar PDF" title="Generar PDF" />
-                      <img
-                        src={editB}
-                        alt="Editar"
-                        title="Editar"
-                        onClick={GoEdait}
-                      />
-                      <img
-                        src={Basura}
-                        alt="Eliminar"
-                        onClick={Delete}
-                        title="Eliminar"
-                      />
-                      <img src={repetir} alt="" title="renovar " />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Pedro Alfonzo Molina Castillo</td>
-                  <td>Universidad Autonoma Del Caribe</td>
-                  <td>Caducada</td>
-                  <td>
-                    <div className="iconTable">
-                      <img src={fileB} alt="Generar PDF" title="Generar PDF" />
-                      <img
-                        src={editB}
-                        alt="Editar"
-                        title="Editar"
-                        onClick={GoEdait}
-                      />
-                      <img
-                        src={Basura}
-                        alt="Eliminar"
-                        onClick={Delete}
-                        title="Editar"
-                      />
-                      <img src={repetir} alt="" title="renovar " />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Pedro Alfonzo Molina Castillo</td>
-                  <td>Universidad Autonoma Del Caribe</td>
-                  <td>Caducada</td>
-                  <td>
-                    <div className="iconTable">
-                      <img src={fileB} alt="Generar PDF" title="Generar PDF" />
-                      <img
-                        src={editB}
-                        alt="Editar"
-                        title="Editar"
-                        onClick={GoEdait}
-                      />
-                      <img
-                        src={Basura}
-                        alt="Eliminar"
-                        onClick={Delete}
-                        title="Editar"
-                      />
-                      <img src={repetir} alt="" title="renovar " />
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
+          <div className="containerGenerar">
+            <form action="">
+              <label htmlFor="">
+                <span>Fecha de inicio</span>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="2023-10-20"
+                    value={date}
+                    disabled
+                    title="Fecha de inicio"
+                  />
+                  <input
+                    className="date"
+                    type="date"
+                    onChange={(e) => setDate(e.target.value)}
+                    value={date}
+                    id="calendario"
+                    title="Fecha de inicio"
+                  />
+                </div>
+              </label>
+              <label htmlFor="">
+                <span>Fecha de finalizacion</span>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="2023-10-20"
+                    value={date2}
+                    disabled
+                    title="Fecha de finalizacion"
+                  />
+                  <input
+                    className="date"
+                    type="date"
+                    onChange={(e) => setDate2(e.target.value)}
+                    value={date2}
+                    id="calendario"
+                    title="Fecha de finalizacion"
+                  />
+                </div>
+              </label>
+              <label htmlFor="">
+                <span>Universidad</span>
+                <select name="" id="" title="Seleciona Universidad">
+                  <option value="">Seleciona una opcion</option>
+                </select>
+              </label>
+              <label htmlFor="">
+                <span>Codigo de usuario</span>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="7G8SD89SJJSAK8FS97F8A09AC"
+                  className="inou"
+                  disabled
+                  title="Codigo de usuario"
+                />
+              </label>
+              <button className="btnSub">Generar</button>
+            </form>
           </div>
         </div>
         {modal && <Modal delete={Delete} />}
@@ -204,4 +182,4 @@ const ResultsAdmin = () => {
   );
 };
 
-export default ResultsAdmin;
+export default Generar;

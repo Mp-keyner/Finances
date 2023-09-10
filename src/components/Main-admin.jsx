@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logo from "../img/finance$.svg";
-import Home from "../img/home.svg";
+import logo from "../img/logoFyba.png";
+import Home2 from "../img/home.svg";
 import user1 from "../img/user.svg";
 import book from "../img/book.svg";
 import edit from "../img/edit.svg";
@@ -15,7 +15,7 @@ import x from "../img/x.svg";
 import { motion } from "framer-motion";
 import menu from "../img/Menu.svg";
 import xClose from "../img/xClose.svg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const MainAdmin = () => {
   const navigate = useNavigate();
@@ -23,6 +23,11 @@ const MainAdmin = () => {
   const GoMain = () => {
     // Redirigir al usuario a otra parte
     navigate("/");
+  };
+  const GoUser = () => {
+    // Redirigir al usuario a otra parte
+    navigate("/result-admin");
+    console.log("object");
   };
   const [manu, setManu] = useState(false);
   const ShowMenu = () => {
@@ -51,36 +56,42 @@ const MainAdmin = () => {
             style={{ width: "3pc" }}
           />
           <img src={logo} alt="" title="FINANCES" onClick={GoMain} />
-          <div className="home">
-            <img src={Home} alt="" />
-            Inicio
-          </div>
+          <Link to={"/admin"}>
+            <div className="home Activo" title="Inicio">
+              <img src={Home2} alt="" />
+              Inicio
+            </div>
+          </Link>
           <div className="containerOp">
             <div>
               <p>cuentas</p>
-              <div className="user">
-                <img src={user1} alt="" />
-                <p>Ver usuarios</p>
-              </div>
-              <div className="book">
-                <img src={book} alt="" />
-                <p>Agregar Universidades</p>
-              </div>
+              <Link to={"/result-admin"}>
+                <div className="user ActivoHver" title="Ver usuarios">
+                  <img src={user1} alt="" />
+                  <p>Ver usuarios</p>
+                </div>
+              </Link>
+              <Link to={"/result-adminUni"}>
+                <div className="book ActivoHver" title="Agregar Universidades">
+                  <img src={book} alt="" />
+                  <p>Agregar Universidades</p>
+                </div>
+              </Link>
             </div>
             <div>
               <p>Licencias</p>
-              <div className="user">
+              <div className="user ActivoHver " title="Generar Codigo">
                 <img src={edit} alt="" />
                 <p>Generar Codigo</p>
               </div>
-              <div className="book">
+              <div className="book ActivoHver" title="Administrar Codigos">
                 <img src={key} alt="" />
                 <p>Administrar Codigos</p>
               </div>
             </div>
             <div>
               <p>Reportes</p>
-              <div className="user">
+              <div className="user ActivoHver" title="Generar PDF">
                 <img src={file} alt="" />
                 <p>Generar PDF</p>
               </div>

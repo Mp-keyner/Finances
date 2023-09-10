@@ -17,18 +17,20 @@ import { motion } from "framer-motion";
 import xClose from "../img/xClose.svg";
 import menu from "../img/Menu.svg";
 import { Link, useNavigate } from "react-router-dom";
-import repetir from "../img/repeat.svg";
 
-const ResultsAdmin = () => {
+const Generar = () => {
+  const [date, setDate] = useState("");
+  const [date2, setDate2] = useState("");
+  console.log(date);
   const navigate = useNavigate();
 
   const GoMain = () => {
     // Redirigir al usuario a otra parte
     navigate("/");
   };
-  const GoEdait = () => {
+  const GoUsert = () => {
     // Redirigir al usuario a otra parte
-    navigate("/admin-edit");
+    navigate("/result-admin");
   };
   const [manu, setManu] = useState(false);
   const ShowMenu = () => {
@@ -86,7 +88,7 @@ const ResultsAdmin = () => {
             </div>
             <div>
               <p>Licencias</p>
-              <div className="user ActivoHver " title="Generar Codigo">
+              <div className="user  ActivoHver" title="Generar Codigo">
                 <img src={edit} alt="" />
                 <p>Generar Codigo</p>
               </div>
@@ -114,88 +116,53 @@ const ResultsAdmin = () => {
               <img src={goOut} alt="" />
             </div>
           </div>
-          <div className="lefAdmi">
-            <div className="containerResults">
-              Lista de usuarios
-              <table>
-                <tr>
-                  <th>Nombre Completo</th>
-                  <th>Universidad</th>
-                  <th>Licencia</th>
-                  <th>Acciones</th>
-                </tr>
-                <br />
-                <tr>
-                  <td>Pedro Alfonzo Molina Castillo</td>
-                  <td>Universidad Autonoma Del Caribe</td>
-                  <td>Activa</td>
-                  <td>
-                    <div className="iconTable">
-                      <img src={fileB} alt="Generar PDF" title="Generar PDF" />
-                      <img
-                        src={editB}
-                        alt="Editar"
-                        title="Editar"
-                        onClick={GoEdait}
-                      />
-                      <img
-                        src={Basura}
-                        alt="Eliminar"
-                        onClick={Delete}
-                        title="Eliminar"
-                      />
-                      <img src={repetir} alt="" title="renovar " />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Pedro Alfonzo Molina Castillo</td>
-                  <td>Universidad Autonoma Del Caribe</td>
-                  <td>Caducada</td>
-                  <td>
-                    <div className="iconTable">
-                      <img src={fileB} alt="Generar PDF" title="Generar PDF" />
-                      <img
-                        src={editB}
-                        alt="Editar"
-                        title="Editar"
-                        onClick={GoEdait}
-                      />
-                      <img
-                        src={Basura}
-                        alt="Eliminar"
-                        onClick={Delete}
-                        title="Editar"
-                      />
-                      <img src={repetir} alt="" title="renovar " />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Pedro Alfonzo Molina Castillo</td>
-                  <td>Universidad Autonoma Del Caribe</td>
-                  <td>Caducada</td>
-                  <td>
-                    <div className="iconTable">
-                      <img src={fileB} alt="Generar PDF" title="Generar PDF" />
-                      <img
-                        src={editB}
-                        alt="Editar"
-                        title="Editar"
-                        onClick={GoEdait}
-                      />
-                      <img
-                        src={Basura}
-                        alt="Eliminar"
-                        onClick={Delete}
-                        title="Editar"
-                      />
-                      <img src={repetir} alt="" title="renovar " />
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
+          <div className="containerGenerar">
+            <form action="">
+              <label htmlFor="">
+                <span>Nombre</span>
+                <input
+                  type="text"
+                  placeholder="Juanito Perez Diaz"
+                  className="inou"
+                  required
+                />
+              </label>
+              <label htmlFor="">
+                <span>Email</span>
+                <input
+                  type="text"
+                  required
+                  placeholder="Juanito Perez Diaz"
+                  className="inou"
+                />
+              </label>
+              <label htmlFor="">
+                <span>Universidad</span>
+                <select name="" id="" title="Seleciona Universidad">
+                  <option value="">Seleciona una opcion</option>
+                </select>
+              </label>
+              <label htmlFor="">
+                <span>Codigo de usuario</span>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="7G8SD89SJJSAK8FS97F8A09AC"
+                  className="inou"
+                  disabled
+                  title="Codigo de usuario"
+                />
+              </label>
+              <label htmlFor="" className="btns">
+                <button className="bt" onClick={GoUsert}>
+                  Guardar
+                </button>
+                <button className="bt" onClick={GoUsert}>
+                  Cancelar
+                </button>
+              </label>
+            </form>
           </div>
         </div>
         {modal && <Modal delete={Delete} />}
@@ -204,4 +171,4 @@ const ResultsAdmin = () => {
   );
 };
 
-export default ResultsAdmin;
+export default Generar;

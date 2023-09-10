@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import imgLateral from "../img/Jan-Business_team_3 1.svg";
-import logo from "../img/finance$.svg";
+import logo from "../img/logoFyba.png";
 import ojo from "../img/eye.svg";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";

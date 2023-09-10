@@ -9,6 +9,9 @@
 body {
   overflow: hidden;
 }
+a {
+  color: white;
+}
 .containerLogin,
 .containerRegister {
   width: 100%;
@@ -215,16 +218,11 @@ input[type="password"] {
   gap: 1.6pc;
 }
 .home {
-  background-color: white;
   display: flex;
   align-items: center;
-  padding: 0 1pc;
   gap: 8px;
-  height: 2.5pc;
-  width: 72%;
+  width: 13pc;
   border-radius: 10px;
-  color: #000;
-  margin-bottom: 3pc;
 }
 .home img {
   width: 24px;
@@ -275,7 +273,7 @@ input[type="password"] {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  /* align-items: center; */
+  align-items: center;
   width: 59.1pc;
   gap: 1pc;
   padding: 0.6pc 1pc;
@@ -403,6 +401,13 @@ tr:hover {
   border-radius: 6px;
   color: #000000;
 }
+.btnGreen {
+  padding: 0.3pc;
+  background: transparent;
+  border: 1px solid #0aff06;
+  border-radius: 6px;
+  color: #0aff06;
+}
 .xClose {
   width: 3pc;
   position: absolute;
@@ -410,7 +415,114 @@ tr:hover {
   top: 10px;
   display: none;
 }
+.centrarLados {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1pc;
+}
+.date {
+  width: 1pc;
+  border: none;
+  cursor: pointer;
+}
+.containerGenerar {
+  -webkit-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  padding: 1pc;
+  border-radius: 8px;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1pc;
+  align-items: center;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+}
+form label div {
+  width: 20pc;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-top: 0.5pc;
+}
+form label div input[type="text"] {
+  width: 85%;
+  background: transparent;
+}
+.inou {
+  margin-top: 0.5pc;
+  border: 1px solid black !important;
+  width: 18.5pc;
+  background: transparent;
+}
+form label select {
+  margin-top: 0.5pc;
+  width: 20pc;
+  border: 1px solid black;
+  padding: 0.7pc 0pc;
+}
+.btnSub {
+  background: var(--bg_main_botons);
+  padding: 0.7pc;
+  width: 20pc;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+.btnSub:hover,
+.btns .bt:hover {
+  background-color: var(--bg_main_botons_hover);
+}
+.Activo {
+  background: white;
+  padding: 0.5pc;
+  width: 13pc;
+  border-radius: 8px;
+  color: black;
+}
+.ActivoHver {
+  border: 1px solid transparent;
+  padding: 0.5pc;
+  width: 13pc;
+  border-radius: 8px;
+}
+.ActivoHver:hover {
+  border: 1px solid white;
+  padding: 0.5pc;
+  width: 13pc;
+  border-radius: 8px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1pc;
+}
 
+.btns .bt {
+  background: var(--bg_main_botons);
+  padding: 0.7pc;
+  width: 9.5pc;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+.btns .bt:nth-child(1) {
+  background: green;
+  padding: 0.7pc;
+  width: 9.5pc;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+.btns .bt:nth-child(1):hover {
+  background: rgb(6, 164, 6);
+}
 @media screen and (max-width: 768px) {
   .containerRegister {
     flex-direction: column;
