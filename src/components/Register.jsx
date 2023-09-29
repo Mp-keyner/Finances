@@ -5,7 +5,9 @@ import logo from "../img/logoFyba.png";
 import ojo from "../img/eye.svg";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { TextField } from "@mui/material";
+import { InputLabel, Select, TextField } from "@mui/material";
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -18,7 +20,10 @@ const Register = () => {
     // Redirigir al usuario a otra parte
     navigate("/");
   };
-
+  const [age, setAge] = React.useState('');
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -49,6 +54,20 @@ const Register = () => {
               borderRadius: '8px 8px 0px 0px',
               width: '100%',
             }} />
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Age</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={age}
+                label="Age"
+                onChange={handleChange}
+              >
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </FormControl>
             <label htmlFor="" className="input" style={{ width: '99%' }}>
               Codigo de Registro
               <input type="text" id="Email" placeholder="Ingresa tu email" />
