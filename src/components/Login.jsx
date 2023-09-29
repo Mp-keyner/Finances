@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 import imgLateral from "../img/Jan-Business_team_3 1.svg";
 import logo from "../img/logoFyba.png";
-import ojo from "../img/eye.svg";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Button, FilledInput, FormControl, IconButton, InputAdornment, InputLabel, TextField } from "@mui/material";
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const Login = () => {
   const navigate = useNavigate();
-
+  const [showPassword, setShowPassword] = useState(false);
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
   const Goregister = () => {
     // Redirigir al usuario a otra parte
     navigate("/register");
@@ -29,28 +35,63 @@ const Login = () => {
           <img src={logo} alt="" className="logo" />
           <h1>Iniciar Sesion</h1>
           <form className="form">
-            <label htmlFor="" className="input" style={{width: '99%'}}>
-              Email
-              <input type="text" id="Email" placeholder="Ingresa tu email" />
-            </label>
-            <label htmlFor="" className="input" style={{width: '99%'}}>
-              Contraseña
-              <span className="eyes">
-                <input
-                  type="password"
-                  id="Contraseña"
-                  placeholder="Ingresa tu contraseña"
-                />
-                <img src={ojo} alt="" />
-              </span>
-            </label>
+            <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="textLight" sx={{
+              borderRadius: '8px 8px 0px 0px',
+              width: '100%',
+              color: 'white',
+
+              '& label': {
+                color: 'white',
+                borderBottomColor: 'white',
+              },
+              '& div::before': {
+                border: 'none',  // Cambia el color del borde antes del input
+              },
+              '& div:hover': {
+                borderBottomColor: 'white',  // Cambia el color del borde antes del input
+              },
+              '& div div:hover': {
+                borderBottomColor: 'white',  // Cambia el color del borde antes del input
+              },
+              '& input': {
+                color: 'white',  // Cambia el color del borde antes del input
+              },
+            }} />
+            <FormControl fullWidth variant="filled" color='textLight'>
+              <InputLabel htmlFor="filled-adornment-password" color='textLight'>Password</InputLabel>
+              <FilledInput
+                id="filled-adornment-password"
+                type={showPassword ? 'text' : 'password'}
+                color='textLight'
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      edge="end"
+                    >
+                      {showPassword ? <VisibilityOff color="textLight" /> : <Visibility color='textLight' />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+              />
+            </FormControl>
             <div className="old">
               <p>¿olvidastes tu contraseña?</p>
             </div>
-            <div className="btn" style={{width: '99%'}}>
-              <button>Iniciar Secion</button>
-              <p>o</p>
-              <button onClick={Goregister}>Registrarse</button>
+            <div className="btn" style={{ width: '99%', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+              <Button size="medium" variant="contained" onClick={Goregister}
+                sx={{
+                  width: '100%'
+                }}>Iniciar Sesión</Button>
+              <p style={{
+                fontSize: '1pc',
+                margin: '1pc',
+                borderBottom: '1px solid white',
+                width: '5pc',
+                paddingBottom: '0.2pc'
+              }}>Registrate</p>
             </div>
           </form>
         </div>

@@ -24,6 +24,9 @@ function App() {
       text: {
         main: '#000',
       },
+      textLight: {
+        main: '#fff'
+      }
     },
   })
 

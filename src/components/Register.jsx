@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 import imgLateral from "../img/Jan-Business_team_3 1.svg";
 import logo from "../img/logoFyba.png";
-import ojo from "../img/eye.svg";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { InputLabel, Select, TextField } from "@mui/material";
+import { Button, FilledInput, IconButton, InputAdornment, InputLabel, Select, TextField } from "@mui/material";
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const Register = () => {
   const navigate = useNavigate();
 
+  const [showPassword, setShowPassword] = useState(false);
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
   const GoLogin = () => {
     // Redirigir al usuario a otra parte
     navigate("/");
@@ -36,55 +42,139 @@ const Register = () => {
           <img src={logo} alt="" className="logo" onClick={GoMain} />
           <h1>Iniciar Sesion</h1>
           <form className="form-register">
-            <TextField variant="filled" placeholder="Nombre Completo: Pedro.." label='Nombre Completo ' color="text" sx={{
-              background: '#fff',
-              color: '#000',
+            <TextField variant="filled" placeholder="Nombre Completo: Pedro.." label='Nombre Completo ' color="textLight" sx={{
               borderRadius: '8px 8px 0px 0px',
               width: '100%',
+              color: 'white',
+
+              '& label': {
+                color: 'white',
+              },
+              '& div::before': {
+                border: 'none',  // Cambia el color del borde antes del input
+              },
+              '& div:hover': {
+                borderBottomColor: 'white',  // Cambia el color del borde antes del input
+              },
+              '& div div:hover': {
+                borderBottomColor: 'white',  // Cambia el color del borde antes del input
+              },
+              '& input': {
+                color: 'white',  // Cambia el color del borde antes del input
+              },
             }} />
-            <TextField variant="filled" placeholder="Nombre Completo: Pedro.." label='Ingresa tu Email' color="text" type="email" sx={{
-              background: '#fff',
-              color: '#000',
+            <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="textLight" sx={{
               borderRadius: '8px 8px 0px 0px',
               width: '100%',
+              color: 'white',
+
+              '& label': {
+                color: 'white',
+                borderBottomColor: 'white',
+              },
+              '& div::before': {
+                border: 'none',  // Cambia el color del borde antes del input
+              },
+              '& div:hover': {
+                borderBottomColor: 'white',  // Cambia el color del borde antes del input
+              },
+              '& div div:hover': {
+                borderBottomColor: 'white',  // Cambia el color del borde antes del input
+              },
+              '& input': {
+                color: 'white',  // Cambia el color del borde antes del input
+              },
             }} />
-            <TextField variant="filled" placeholder="Nombre Completo: Pedro.." label='Ingresa tu contraseña' color="text" type="password" sx={{
-              background: '#fff',
-              color: '#000',
+            <FormControl fullWidth variant="filled" color='textLight'>
+              <InputLabel htmlFor="filled-adornment-password" color='textLight'>Password</InputLabel>
+              <FilledInput
+                id="filled-adornment-password"
+                type={showPassword ? 'text' : 'password'}
+                color='textLight'
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      edge="end"
+                    >
+                      {showPassword ? <VisibilityOff color="textLight" /> : <Visibility color='textLight' />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+              />
+            </FormControl>
+            <TextField variant="filled" placeholder="13643..." label='Ingresa el Codigo de Registro' color="textLight" sx={{
               borderRadius: '8px 8px 0px 0px',
               width: '100%',
+              color: 'white',
+
+              '& label': {
+                color: 'white',
+                borderBottomColor: 'white',
+              },
+              '& div::before': {
+                border: 'none',  // Cambia el color del borde antes del input
+              },
+              '& div:hover': {
+                borderBottomColor: 'white',  // Cambia el color del borde antes del input
+              },
+              '& div div:hover': {
+                borderBottomColor: 'white',  // Cambia el color del borde antes del input
+              },
+              '& input': {
+                color: 'white',  // Cambia el color del borde antes del input
+              },
             }} />
-            <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <FormControl fullWidth variant="filled">
+              <InputLabel id="demo-simple-select-label" color='textLight'
+                sx={{
+                  borderRadius: '8px 8px 0px 0px',
+                  width: '100%',
+                  color: 'white',
+
+                  '& label': {
+                    color: 'white',
+                    borderBottomColor: 'white',
+                  },
+                  '& div::before': {
+                    border: 'none',  // Cambia el color del borde antes del input
+                  },
+                  '& div:hover': {
+                    borderBottomColor: 'white',  // Cambia el color del borde antes del input
+                  },
+                  '& div': {
+                    color: 'white',  // Cambia el color del borde antes del input
+                  },
+                  '& input': {
+                    color: 'white',  // Cambia el color del borde antes del input
+                  },
+                }}
+              >Selecciona tu Universidad</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={age}
-                label="Age"
+                label="Selecciona tu Universidad"
                 onChange={handleChange}
+                color="textLight"
+
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <MenuItem value={10}>Universidad 1</MenuItem>
+                <MenuItem value={20}>Universidad 2</MenuItem>
+                <MenuItem value={30}>Universidad 3</MenuItem>
               </Select>
             </FormControl>
-            <label htmlFor="" className="input" style={{ width: '99%' }}>
-              Codigo de Registro
-              <input type="text" id="Email" placeholder="Ingresa tu email" />
-            </label>
-            <label htmlFor="" className="input" style={{ width: '99%' }}>
-              Universidad
-              <select style={{ width: '100%' }}>
-                <option value="Universidad 1">Universidad 1</option>
-                <option value="Universidad 2">Universidad 2</option>
-                <option value="Universidad 3">Universidad 3</option>
-                <option value="Universidad 4">Universidad 4</option>
-                <option value="Universidad 5">Universidad 5</option>
-              </select>
-            </label>
 
-            <div className="btn">
-              <button onClick={GoLogin}>Iniciar Secion</button>
+
+            <div className="btn" style={{
+              width: '100%'
+            }}>
+              <Button size="medium" variant="contained" onClick={GoLogin}
+                sx={{
+                  width: '100%'
+                }}>Iniciar Sesión</Button>
             </div>
           </form>
         </div>
