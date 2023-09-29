@@ -29,11 +29,11 @@ const Login = () => {
           <img src={logo} alt="" className="logo" />
           <h1>Iniciar Sesion</h1>
           <form className="form">
-            <label htmlFor="" className="input">
+            <label htmlFor="" className="input" style={{width: '99%'}}>
               Email
               <input type="text" id="Email" placeholder="Ingresa tu email" />
             </label>
-            <label htmlFor="" className="input">
+            <label htmlFor="" className="input" style={{width: '99%'}}>
               Contraseña
               <span className="eyes">
                 <input
@@ -47,7 +47,7 @@ const Login = () => {
             <div className="old">
               <p>¿olvidastes tu contraseña?</p>
             </div>
-            <div className="btn">
+            <div className="btn" style={{width: '99%'}}>
               <button>Iniciar Secion</button>
               <p>o</p>
               <button onClick={Goregister}>Registrarse</button>

@@ -30,32 +30,33 @@ const Register = () => {
           <img src={logo} alt="" className="logo" onClick={GoMain} />
           <h1>Iniciar Sesion</h1>
           <form className="form-register">
-            <label htmlFor="" className="input">
+            <label htmlFor="" className="input" style={{width: '99%'}}>
               Nombre Completo
               <input type="text" id="Email" placeholder="Ingresa tu email" />
             </label>
-            <label htmlFor="" className="input">
+            <label htmlFor="" className="input" style={{width: '99%'}}>
               Email
               <input type="text" id="Email" placeholder="Ingresa tu email" />
             </label>
-            <label htmlFor="" className="input">
+            <label htmlFor="" className="input" style={{width: '99%'}}>
               Contraseña
               <span className="eyes">
                 <input
                   type="password"
                   id="Contraseña"
                   placeholder="Ingresa tu contraseña"
+                  style={{width: '100%'}}
                 />
                 <img src={ojo} alt="" />
               </span>
             </label>
-            <label htmlFor="" className="input">
+            <label htmlFor="" className="input" style={{width: '99%'}}>
               Codigo de Registro
               <input type="text" id="Email" placeholder="Ingresa tu email" />
             </label>
-            <label htmlFor="" className="input">
+            <label htmlFor="" className="input" style={{width: '99%'}}>
               Universidad
-              <select>
+              <select style={{width: '100%'}}>
                 <option value="Universidad 1">Universidad 1</option>
                 <option value="Universidad 2">Universidad 2</option>
                 <option value="Universidad 3">Universidad 3</option>
