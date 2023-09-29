@@ -5,6 +5,7 @@ import logo from "../img/logoFyba.png";
 import ojo from "../img/eye.svg";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { TextField } from "@mui/material";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -30,33 +31,31 @@ const Register = () => {
           <img src={logo} alt="" className="logo" onClick={GoMain} />
           <h1>Iniciar Sesion</h1>
           <form className="form-register">
-            <label htmlFor="" className="input" style={{width: '99%'}}>
-              Nombre Completo
-              <input type="text" id="Email" placeholder="Ingresa tu email" />
-            </label>
-            <label htmlFor="" className="input" style={{width: '99%'}}>
-              Email
-              <input type="text" id="Email" placeholder="Ingresa tu email" />
-            </label>
-            <label htmlFor="" className="input" style={{width: '99%'}}>
-              Contraseña
-              <span className="eyes">
-                <input
-                  type="password"
-                  id="Contraseña"
-                  placeholder="Ingresa tu contraseña"
-                  style={{width: '100%'}}
-                />
-                <img src={ojo} alt="" />
-              </span>
-            </label>
-            <label htmlFor="" className="input" style={{width: '99%'}}>
+            <TextField variant="filled" placeholder="Nombre Completo: Pedro.." label='Nombre Completo ' color="text" sx={{
+              background: '#fff',
+              color: '#000',
+              borderRadius: '8px 8px 0px 0px',
+              width: '100%',
+            }} />
+            <TextField variant="filled" placeholder="Nombre Completo: Pedro.." label='Ingresa tu Email' color="text" type="email" sx={{
+              background: '#fff',
+              color: '#000',
+              borderRadius: '8px 8px 0px 0px',
+              width: '100%',
+            }} />
+            <TextField variant="filled" placeholder="Nombre Completo: Pedro.." label='Ingresa tu contraseña' color="text" type="password" sx={{
+              background: '#fff',
+              color: '#000',
+              borderRadius: '8px 8px 0px 0px',
+              width: '100%',
+            }} />
+            <label htmlFor="" className="input" style={{ width: '99%' }}>
               Codigo de Registro
               <input type="text" id="Email" placeholder="Ingresa tu email" />
             </label>
-            <label htmlFor="" className="input" style={{width: '99%'}}>
+            <label htmlFor="" className="input" style={{ width: '99%' }}>
               Universidad
-              <select style={{width: '100%'}}>
+              <select style={{ width: '100%' }}>
                 <option value="Universidad 1">Universidad 1</option>
                 <option value="Universidad 2">Universidad 2</option>
                 <option value="Universidad 3">Universidad 3</option>

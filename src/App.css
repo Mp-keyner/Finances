@@ -3,15 +3,19 @@
   --bg_main_botons: #e9352b;
   --bg_main_botons_hover: #fe5b52;
 }
+
 * {
   outline: none;
 }
+
 body {
   overflow: hidden;
 }
+
 a {
   color: white;
 }
+
 .containerLogin,
 .containerRegister {
   width: 100%;
@@ -20,6 +24,7 @@ a {
   height: 100vh;
   justify-content: center;
 }
+
 .lefAdmi {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -30,12 +35,14 @@ a {
 
   border-radius: 8px;
 }
+
 .lefAd {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1pc;
   border-radius: 8px;
 }
+
 .CarValue {
   -webkit-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
@@ -57,12 +64,15 @@ a {
   align-items: center;
   gap: 0.6pc;
 }
+
 .centrar img {
   width: 5pc;
 }
+
 .centrarp {
   width: 12pc;
 }
+
 .left {
   width: 50%;
   height: 100%;
@@ -70,6 +80,7 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 .right {
   height: 100%;
   width: 50%;
@@ -81,6 +92,7 @@ a {
   color: white;
   gap: 1pc;
 }
+
 .right-register {
   height: 100%;
   width: 50%;
@@ -91,36 +103,41 @@ a {
   flex-direction: column;
   color: white;
 }
+
 .right h1 {
   font-size: 2pc;
 }
+
 .logo {
   width: 13pc;
 }
+
 .input {
   display: flex;
   flex-direction: column;
   gap: 0.1pc;
 }
-input[type="text"],
-select,
-input[type="password"] {
+
+select {
   padding: 0.7pc;
   border-radius: 5px;
   border: none;
 }
+
 .form {
   display: flex;
   flex-direction: column;
   gap: 1.6pc;
   width: 100%;
 }
+
 .form-register {
   display: flex;
   flex-direction: column;
   gap: 1pc;
   width: 100%;
 }
+
 .eyes {
   background: white;
   border-radius: 5px;
@@ -128,29 +145,36 @@ input[type="password"] {
   justify-content: space-between;
   padding-right: 0.6pc;
 }
+
 .eyes img {
   width: 1pc;
 }
+
 .eyes input[type="password"] {
   width: 33pc;
 }
+
 .old {
   text-align: end;
   padding-right: 0.6pc;
 }
+
 .btn {
   margin-top: 1pc;
   font-size: 1.5pc;
   text-align: center;
 }
+
 .containerOp {
   display: flex;
   flex-direction: column;
   gap: 1pc;
 }
+
 .containerOp div {
   margin-bottom: 0.5pc;
 }
+
 .btn button {
   width: 100%;
   padding: 12px;
@@ -159,12 +183,15 @@ input[type="password"] {
   border: none;
   border-radius: 5px;
 }
+
 .btn button:hover {
   background-color: var(--bg_main_botons_hover);
 }
+
 .containerAdmin {
   display: flex;
 }
+
 .SecSearch,
 .SecSearchAdmin {
   width: 97%;
@@ -180,19 +207,23 @@ input[type="password"] {
   -moz-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
 }
+
 .SecSearch div,
 .SecSearchAdmin div {
   display: flex;
   align-items: center;
   gap: 0.6pc;
 }
+
 #menu {
   display: none;
 }
+
 .SecSearch img,
 .SecSearchAdmin img {
   width: 2pc;
 }
+
 .leftAdmin {
   width: 20%;
   /* border: 1px solid green; */
@@ -205,9 +236,11 @@ input[type="password"] {
   color: white;
   position: static;
 }
+
 .leftAdmin img {
   width: 80%;
 }
+
 .rigthAdmin {
   width: 80%;
   height: 100vh;
@@ -217,6 +250,7 @@ input[type="password"] {
   flex-direction: column;
   gap: 1.6pc;
 }
+
 .home {
   display: flex;
   align-items: center;
@@ -224,9 +258,11 @@ input[type="password"] {
   width: 13pc;
   border-radius: 10px;
 }
+
 .home img {
   width: 24px;
 }
+
 .user {
   display: flex;
   align-items: center;
@@ -234,18 +270,22 @@ input[type="password"] {
   margin: 0.5pc 0;
   cursor: pointer;
 }
+
 .user img {
   width: 24px;
 }
+
 .book {
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.6pc;
 }
+
 .book img {
   width: 24px;
 }
+
 .CirLive {
   width: 1pc;
   height: 1pc;
@@ -268,6 +308,7 @@ input[type="password"] {
   border-radius: 8px;
   height: 28pc;
 }
+
 .containerResults {
   /* background-color: rgb(255, 176, 5); */
   display: flex;
@@ -279,6 +320,7 @@ input[type="password"] {
   padding: 0.6pc 1pc;
   height: 28pc;
 }
+
 .containerUse {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -289,14 +331,17 @@ input[type="password"] {
   gap: 1pc;
   padding-bottom: 2pc;
 }
+
 .containerUserLive hr {
   width: 90%;
   border: 1px solid rgb(0, 0, 0);
 }
+
 .containerUse hr {
   width: 100%;
   border: 1px solid rgb(0, 0, 0);
 }
+
 .UserLive {
   display: flex;
   align-items: center;
@@ -314,9 +359,11 @@ input[type="password"] {
   padding: 0 1pc;
   grid-template-columns: repeat(2, 1fr);
 }
+
 .containerUse::-webkit-scrollbar {
   display: none;
 }
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -343,12 +390,14 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #e0e0e0;
 }
+
 .iconTable {
   display: flex;
   align-items: center;
   gap: 0.6pc;
   justify-content: center;
 }
+
 .containerModal {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.574);
@@ -359,6 +408,7 @@ tr:hover {
   align-items: center;
   justify-content: center;
 }
+
 .modal {
   /* background-color: rgb(238, 255, 0); */
   background-color: rgb(221, 219, 219);
@@ -371,6 +421,7 @@ tr:hover {
   flex-direction: column;
   gap: 1pc;
 }
+
 .mainModal {
   display: flex;
   flex-direction: column;
@@ -379,14 +430,17 @@ tr:hover {
   height: 12pc;
   color: red;
 }
+
 .mainModal hr {
   width: 99%;
 }
+
 .mainModal div {
   display: flex;
   align-items: center;
   gap: 1pc;
 }
+
 .btnClose {
   padding: 0.3pc;
   background: transparent;
@@ -394,6 +448,7 @@ tr:hover {
   border-radius: 6px;
   color: red;
 }
+
 .btnTrue {
   padding: 0.3pc;
   background: transparent;
@@ -401,6 +456,7 @@ tr:hover {
   border-radius: 6px;
   color: #000000;
 }
+
 .btnGreen {
   padding: 0.3pc;
   background: transparent;
@@ -408,6 +464,7 @@ tr:hover {
   border-radius: 6px;
   color: #0aff06;
 }
+
 .xClose {
   width: 3pc;
   position: absolute;
@@ -415,17 +472,20 @@ tr:hover {
   top: 10px;
   display: none;
 }
+
 .centrarLados {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1pc;
 }
+
 .date {
   width: 1pc;
   border: none;
   cursor: pointer;
 }
+
 .containerGenerar {
   -webkit-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
@@ -433,6 +493,7 @@ tr:hover {
   padding: 1pc;
   border-radius: 8px;
 }
+
 form {
   width: 100%;
   display: flex;
@@ -440,32 +501,31 @@ form {
   gap: 1pc;
   align-items: center;
 }
+
 form label {
   display: flex;
   flex-direction: column;
 }
-form label div {
-  width: 20pc;
-  border: 1px solid black;
-  border-radius: 8px;
-  margin-top: 0.5pc;
-}
+
 form label div input[type="text"] {
   width: 85%;
   background: transparent;
 }
+
 .inou {
   margin-top: 0.5pc;
   border: 1px solid black !important;
   width: 18.5pc;
   background: transparent;
 }
+
 form label select {
   margin-top: 0.5pc;
   width: 20pc;
   border: 1px solid black;
   padding: 0.7pc 0pc;
 }
+
 .btnSub {
   background: var(--bg_main_botons);
   padding: 0.7pc;
@@ -474,10 +534,12 @@ form label select {
   border-radius: 8px;
   color: white;
 }
+
 .btnSub:hover,
 .btns .bt:hover {
   background-color: var(--bg_main_botons_hover);
 }
+
 .Activo {
   background: white;
   padding: 0.5pc;
@@ -485,18 +547,21 @@ form label select {
   border-radius: 8px;
   color: black;
 }
+
 .ActivoHver {
   border: 1px solid transparent;
   padding: 0.5pc;
   width: 13pc;
   border-radius: 8px;
 }
+
 .ActivoHver:hover {
   border: 1px solid white;
   padding: 0.5pc;
   width: 13pc;
   border-radius: 8px;
 }
+
 .btns {
   display: flex;
   align-items: center;
@@ -512,6 +577,7 @@ form label select {
   border-radius: 8px;
   color: white;
 }
+
 .btns .bt:nth-child(1) {
   background: green;
   padding: 0.7pc;
@@ -520,38 +586,47 @@ form label select {
   border-radius: 8px;
   color: white;
 }
+
 .btns .bt:nth-child(1):hover {
   background: rgb(6, 164, 6);
 }
+
 @media screen and (max-width: 768px) {
   .containerRegister {
     flex-direction: column;
     background-color: var(--bg_main);
   }
+
   .containerModal {
     width: 27pc;
   }
+
   .xClose {
     display: block;
   }
+
   .right-register {
     width: 90%;
     padding: 0;
   }
+
   .left {
     display: none;
   }
+
   .right {
     width: 93%;
     height: 101vh;
     padding: 0 1pc;
   }
+
   .SecSearchAdmin {
     justify-content: space-between;
     padding: 1pc;
     /* width: 34pc; */
     width: 91%;
   }
+
   .SecSearch {
     justify-content: space-between;
     padding: 1pc;
@@ -559,15 +634,18 @@ form label select {
     height: 2pc;
     width: 91%;
   }
+
   #menu {
     display: block;
   }
+
   .leftAdmin {
     padding-top: 4pc;
     position: absolute;
     width: 70%;
     transition: all 0.5s ease-in-out;
   }
+
   .lefAdmi {
     flex-direction: column;
     gap: 2pc;
@@ -575,9 +653,11 @@ form label select {
     overflow: auto;
     padding: 5px;
   }
+
   .containerUserLive {
     width: 91%;
   }
+
   /* .containerUserLive {
     width: 34pc;
   } */
@@ -586,12 +666,15 @@ form label select {
     width: 100%;
     padding: 0;
   }
+
   body {
     overflow: scroll;
   }
+
   .rigthAdmin {
     width: 100%;
   }
+
   .lefAd {
     grid-template-columns: 1fr;
     padding-bottom: 3pc;

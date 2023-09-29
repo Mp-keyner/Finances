@@ -8,21 +8,40 @@ import EditUser from "./components/EditUser";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Generar from "./components/GenerarCodigo";
 import AdminList from "./components/AgragarList";
+import { ThemeProvider, createTheme } from "@mui/material";
 
 function App() {
+
+  const theme = createTheme({
+    palette: {
+      mode: 'light',
+      primary: {
+        main: '#e9352b',
+      },
+      secondary: {
+        main: '#3435ce',
+      },
+      text: {
+        main: '#000',
+      },
+    },
+  })
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/admin" element={<MainAdmin />} />
-        <Route path="/result-admin" element={<ResultsAdmin />} />
-        <Route path="/result-adminUni" element={<AdminUni />} />
-        <Route path="/admin-edit" element={<EditUser />} />
-        <Route path="/Generar" element={<Generar />} />
-        <Route path="/admin-list" element={<AdminList />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/admin" element={<MainAdmin />} />
+          <Route path="/result-admin" element={<ResultsAdmin />} />
+          <Route path="/result-adminUni" element={<AdminUni />} />
+          <Route path="/admin-edit" element={<EditUser />} />
+          <Route path="/Generar" element={<Generar />} />
+          <Route path="/admin-list" element={<AdminList />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
