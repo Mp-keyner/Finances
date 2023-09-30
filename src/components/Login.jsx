@@ -35,30 +35,15 @@ const Login = () => {
           <img src={logo} alt="" className="logo" />
           <h1>Iniciar Sesion</h1>
           <form className="form">
-            <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="textLight" sx={{
-              borderRadius: '8px 8px 0px 0px',
-              width: '100%',
-              color: 'white',
-
-              '& label': {
-                color: 'white',
-                borderBottomColor: 'white',
-              },
+            <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="text" sx={{
+              background: 'white',
+              borderRadius: '8px',
               '& div::before': {
                 border: 'none',  // Cambia el color del borde antes del input
               },
-              '& div:hover': {
-                borderBottomColor: 'white',  // Cambia el color del borde antes del input
-              },
-              '& div div:hover': {
-                borderBottomColor: 'white',  // Cambia el color del borde antes del input
-              },
-              '& input': {
-                color: 'white',  // Cambia el color del borde antes del input
-              },
             }} />
-            <FormControl fullWidth variant="filled" color='textLight'>
-              <InputLabel htmlFor="filled-adornment-password" color='textLight'>Password</InputLabel>
+            <FormControl fullWidth variant="filled" color='text'>
+              <InputLabel htmlFor="filled-adornment-password" color='text'>Password</InputLabel>
               <FilledInput
                 id="filled-adornment-password"
                 type={showPassword ? 'text' : 'password'}
@@ -71,7 +56,7 @@ const Login = () => {
                       onMouseDown={handleMouseDownPassword}
                       edge="end"
                     >
-                      {showPassword ? <VisibilityOff color="textLight" /> : <Visibility color='textLight' />}
+                      {showPassword ? <VisibilityOff color="text" /> : <Visibility color='text' />}
                     </IconButton>
                   </InputAdornment>
                 }
