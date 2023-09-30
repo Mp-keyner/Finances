@@ -17,9 +17,13 @@ import { motion } from "framer-motion";
 import xClose from "../img/xClose.svg";
 import menu from "../img/Menu.svg";
 import { Link, useNavigate } from "react-router-dom";
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-const Generar = () => {
-  const [date, setDate] = useState("");
+
+const Generar = () => { 
   const [date2, setDate2] = useState("");
   console.log(date);
   const navigate = useNavigate();
@@ -114,26 +118,11 @@ const Generar = () => {
           </div>
           <div className="containerGenerar">
             <form action="">
-              <label htmlFor="">
-                <span>Fecha de inicio</span>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="2023-10-20"
-                    value={date}
-                    disabled
-                    title="Fecha de inicio"
-                  />
-                  <input
-                    className="date"
-                    type="date"
-                    onChange={(e) => setDate(e.target.value)}
-                    value={date}
-                    id="calendario"
-                    title="Fecha de inicio"
-                  />
-                </div>
-              </label>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <DemoContainer components={['DatePicker']}>
+        <DatePicker label="Basic date picker" />
+      </DemoContainer>
+    </LocalizationProvider>
               <label htmlFor="">
                 <span>Fecha de finalizacion</span>
                 <div>

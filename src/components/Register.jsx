@@ -42,7 +42,7 @@ const Register = () => {
           <img src={logo} alt="" className="logo" onClick={GoMain} />
           <h1>Iniciar Sesion</h1>
           <form className="form-register">
-          <TextField variant="filled" placeholder="Pedro.." label='Nombre Completo ' color="textLight"  color="text" sx={{
+          <TextField variant="filled" placeholder="Pedro.." label='Nombre Completo ' color="textLight"  sx={{
               background: 'white',
               borderRadius: '5px 5px 0 0',
               width: '100%',
@@ -53,7 +53,7 @@ const Register = () => {
                 backgroundColor: 'white',
               },
             }} />
-          <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="textLight"  color="text" sx={{
+          <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="textLight"  sx={{
               background: 'white',
               borderRadius: '5px 5px 0 0',
               width: '100%',
@@ -98,7 +98,7 @@ const Register = () => {
                 }}
               />
             </FormControl>
-            <TextField variant="filled" placeholder="13643..." label='Ingresa el Codigo de Registro' color="textLight"  color="text" sx={{
+            <TextField variant="filled" placeholder="13643..." label='Ingresa el Codigo de Registro' color="textLight"  sx={{
               background: 'white',
               borderRadius: '5px 5px 0 0',
               width: '100%',

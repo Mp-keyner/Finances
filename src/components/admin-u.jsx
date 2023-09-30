@@ -17,7 +17,7 @@ import xClose from "../img/xClose.svg";
 import menu from "../img/Menu.svg";
 import { Link, useNavigate } from "react-router-dom";
 
-const AdminUni = () => {
+const AdminUni = () => { 
   const navigate = useNavigate();
 
   const GoMain = () => {
@@ -112,7 +112,9 @@ const AdminUni = () => {
           </div>
           <div className="lefAdmi">
             <div className="containerResults">
-              <div className="centrarLados">
+              <div className="centrarLados" style={{
+                width: '100%',
+              }}>
                 <p> Lista de universidades</p>
                 <button className="btnGreen">Agregar</button>
               </div>
