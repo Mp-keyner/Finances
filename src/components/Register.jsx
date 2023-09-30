@@ -42,55 +42,36 @@ const Register = () => {
           <img src={logo} alt="" className="logo" onClick={GoMain} />
           <h1>Iniciar Sesion</h1>
           <form className="form-register">
-            <TextField variant="filled" placeholder="Nombre Completo: Pedro.." label='Nombre Completo ' color="textLight" sx={{
-              borderRadius: '8px 8px 0px 0px',
+          <TextField variant="filled" placeholder="Pedro.." label='Nombre Completo ' color="textLight"  color="text" sx={{
+              background: 'white',
+              borderRadius: '5px 5px 0 0',
               width: '100%',
-              color: 'white',
-
-              '& label': {
-                color: 'white',
-              },
               '& div::before': {
                 border: 'none',  // Cambia el color del borde antes del input
               },
-              '& div:hover': {
-                borderBottomColor: 'white',  // Cambia el color del borde antes del input
-              },
-              '& div div:hover': {
-                borderBottomColor: 'white',  // Cambia el color del borde antes del input
-              },
-              '& input': {
-                color: 'white',  // Cambia el color del borde antes del input
+              '&.Mui-focused': {
+                backgroundColor: 'white',
               },
             }} />
-            <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="textLight" sx={{
-              borderRadius: '8px 8px 0px 0px',
+          <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="textLight"  color="text" sx={{
+              background: 'white',
+              borderRadius: '5px 5px 0 0',
               width: '100%',
-              color: 'white',
-
-              '& label': {
-                color: 'white',
-                borderBottomColor: 'white',
-              },
               '& div::before': {
                 border: 'none',  // Cambia el color del borde antes del input
               },
-              '& div:hover': {
-                borderBottomColor: 'white',  // Cambia el color del borde antes del input
-              },
-              '& div div:hover': {
-                borderBottomColor: 'white',  // Cambia el color del borde antes del input
-              },
-              '& input': {
-                color: 'white',  // Cambia el color del borde antes del input
+              '&.Mui-focused': {
+                backgroundColor: 'white',
               },
             }} />
-            <FormControl fullWidth variant="filled" color='textLight'>
-              <InputLabel htmlFor="filled-adornment-password" color='textLight'>Password</InputLabel>
+          
+          <FormControl fullWidth variant="filled" color='text'>
+              <InputLabel htmlFor="filled-adornment-password" color='text' >Password</InputLabel>
               <FilledInput
+              placeholder="sec.."
                 id="filled-adornment-password"
                 type={showPassword ? 'text' : 'password'}
-                color='textLight'
+                color='text'
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
@@ -99,58 +80,50 @@ const Register = () => {
                       onMouseDown={handleMouseDownPassword}
                       edge="end"
                     >
-                      {showPassword ? <VisibilityOff color="textLight" /> : <Visibility color='textLight' />}
+                      {showPassword ? <VisibilityOff color="text" /> : <Visibility color='text' />}
                     </IconButton>
                   </InputAdornment>
                 }
+                sx={{
+                  backgroundColor: 'white',
+                  '&:hover': {
+                    backgroundColor: 'white',
+                  },
+                  '&:focus': {
+                    backgroundColor: 'white',
+                  },
+                  '&.Mui-focused': {
+                    backgroundColor: 'white',
+                  },
+                }}
               />
             </FormControl>
-            <TextField variant="filled" placeholder="13643..." label='Ingresa el Codigo de Registro' color="textLight" sx={{
-              borderRadius: '8px 8px 0px 0px',
+            <TextField variant="filled" placeholder="13643..." label='Ingresa el Codigo de Registro' color="textLight"  color="text" sx={{
+              background: 'white',
+              borderRadius: '5px 5px 0 0',
               width: '100%',
-              color: 'white',
-
-              '& label': {
-                color: 'white',
-                borderBottomColor: 'white',
-              },
               '& div::before': {
                 border: 'none',  // Cambia el color del borde antes del input
               },
-              '& div:hover': {
-                borderBottomColor: 'white',  // Cambia el color del borde antes del input
-              },
-              '& div div:hover': {
-                borderBottomColor: 'white',  // Cambia el color del borde antes del input
-              },
-              '& input': {
-                color: 'white',  // Cambia el color del borde antes del input
+              '&.Mui-focused': {
+                backgroundColor: 'white',
               },
             }} />
-            <FormControl fullWidth variant="filled">
-              <InputLabel id="demo-simple-select-label" color='textLight'
-                sx={{
-                  borderRadius: '8px 8px 0px 0px',
-                  width: '100%',
-                  color: 'white',
-
-                  '& label': {
-                    color: 'white',
-                    borderBottomColor: 'white',
+            <FormControl fullWidth variant="filled"   sx={{
+                  borderRadius: '5px 5px 0 0',
+                  backgroundColor: 'white',
+                  '&:hover': {
+                    backgroundColor: 'white',
                   },
-                  '& div::before': {
-                    border: 'none',  // Cambia el color del borde antes del input
+                  '&:focus': {
+                    backgroundColor: 'white',
                   },
-                  '& div:hover': {
-                    borderBottomColor: 'white',  // Cambia el color del borde antes del input
+                  '&.Mui-focused': {
+                    backgroundColor: 'white',
                   },
-                  '& div': {
-                    color: 'white',  // Cambia el color del borde antes del input
-                  },
-                  '& input': {
-                    color: 'white',  // Cambia el color del borde antes del input
-                  },
-                }}
+                }}>
+              <InputLabel id="demo-simple-select-label" color='text'
+                
               >Selecciona tu Universidad</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
@@ -158,7 +131,7 @@ const Register = () => {
                 value={age}
                 label="Selecciona tu Universidad"
                 onChange={handleChange}
-                color="textLight"
+                color="text"
 
               >
                 <MenuItem value={10}>Universidad 1</MenuItem>

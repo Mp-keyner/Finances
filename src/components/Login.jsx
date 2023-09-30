@@ -37,17 +37,22 @@ const Login = () => {
           <form className="form">
             <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="text" sx={{
               background: 'white',
-              borderRadius: '8px',
+              borderRadius: '5px 5px 0 0',
+              width: '100%',
               '& div::before': {
                 border: 'none',  // Cambia el color del borde antes del input
               },
+              '&.Mui-focused': {
+                backgroundColor: 'white',
+              },
             }} />
             <FormControl fullWidth variant="filled" color='text'>
-              <InputLabel htmlFor="filled-adornment-password" color='text'>Password</InputLabel>
+              <InputLabel htmlFor="filled-adornment-password" color='text' >Password</InputLabel>
               <FilledInput
+              placeholder="sec.."
                 id="filled-adornment-password"
                 type={showPassword ? 'text' : 'password'}
-                color='textLight'
+                color='text'
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
@@ -60,13 +65,30 @@ const Login = () => {
                     </IconButton>
                   </InputAdornment>
                 }
+                sx={{
+                  backgroundColor: 'white',
+                  '&:hover': {
+                    backgroundColor: 'white',
+                  },
+                  '&:focus': {
+                    backgroundColor: 'white',
+                  },
+                  '&.Mui-focused': {
+                    backgroundColor: 'white',
+                  },
+                }}
               />
             </FormControl>
             <div className="old">
-              <p>¿olvidastes tu contraseña?</p>
+              <p style={{
+                 borderBottom: '1px solid white',
+                 paddingBottom: '0.2pc',
+                 cursor: 'pointer',
+                 width: '12.3pc',
+              }}>¿olvidastes tu contraseña?</p>
             </div>
             <div className="btn" style={{ width: '99%', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-              <Button size="medium" variant="contained" onClick={Goregister}
+              <Button size="medium" variant="contained"
                 sx={{
                   width: '100%'
                 }}>Iniciar Sesión</Button>
@@ -75,8 +97,9 @@ const Login = () => {
                 margin: '1pc',
                 borderBottom: '1px solid white',
                 width: '5pc',
-                paddingBottom: '0.2pc'
-              }}>Registrate</p>
+                paddingBottom: '0.2pc',
+                cursor: 'pointer'
+              }}  onClick={Goregister}>Registrate</p>
             </div>
           </form>
         </div>
