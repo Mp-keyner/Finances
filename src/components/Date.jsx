@@ -8,7 +8,7 @@ export default function BasicDatePicker() {
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DemoContainer components={['DatePicker']} sx={{
-                width: '100%'
+                width: '100%',
             }}>
                 <DatePicker label="Basic date picker" sx={{
                     width: '100%',
@@ -24,6 +24,9 @@ export default function BasicDatePicker() {
                     '& ::before': {
                         border: 'none',  // Cambia el color del borde antes del input
                     },
+                    // '& fieldset': {
+                    //     border: 'none'
+                    // },
                 }} />
             </DemoContainer>
         </LocalizationProvider>

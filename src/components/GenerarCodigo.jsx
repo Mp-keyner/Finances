@@ -4,14 +4,11 @@ import Home2 from "../img/home2.svg";
 import user1 from "../img/user.svg";
 import book from "../img/book.svg";
 import edit from "../img/edit2.svg";
-import editB from "../img/edit-black.svg";
 import file from "../img/file.svg";
-import fileB from "../img/book-black.svg";
 import key from "../img/key.svg";
 import goOut from "../img/goOut.svg";
 import Lupa from "../img/Lupa.svg";
 import UserCircle from "../img/UserCircle.svg";
-import Basura from "../img/Basura.svg";
 import Modal from "./Modal";
 import { motion } from "framer-motion";
 import xClose from "../img/xClose.svg";
@@ -23,9 +20,8 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 
-const Generar = () => { 
+const Generar = () => {
   const [date2, setDate2] = useState("");
-  console.log(date);
   const navigate = useNavigate();
 
   const GoMain = () => {
@@ -118,31 +114,21 @@ const Generar = () => {
           </div>
           <div className="containerGenerar">
             <form action="">
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DemoContainer components={['DatePicker']}>
-        <DatePicker label="Basic date picker" />
-      </DemoContainer>
-    </LocalizationProvider>
-              <label htmlFor="">
-                <span>Fecha de finalizacion</span>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="2023-10-20"
-                    value={date2}
-                    disabled
-                    title="Fecha de finalizacion"
-                  />
-                  <input
-                    className="date"
-                    type="date"
-                    onChange={(e) => setDate2(e.target.value)}
-                    value={date2}
-                    id="calendario"
-                    title="Fecha de finalizacion"
-                  />
-                </div>
-              </label>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer components={['DatePicker']}>
+                  <DatePicker label="Fecha de inicio" sx={{
+                    width: '20pc'
+                  }} />
+                </DemoContainer>
+              </LocalizationProvider>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer components={['DatePicker']}>
+                  <DatePicker label="Fecha de finalizacion" sx={{
+                    width: '20pc'
+                  }} />
+                </DemoContainer>
+              </LocalizationProvider>
+
               <label htmlFor="">
                 <span>Universidad</span>
                 <select name="" id="" title="Seleciona Universidad">
