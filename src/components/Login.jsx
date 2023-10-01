@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Button, FilledInput, FormControl, IconButton, InputAdornment, InputLabel, TextField } from "@mui/material";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import Date from './Date'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -49,7 +50,7 @@ const Login = () => {
             <FormControl fullWidth variant="filled" color='text'>
               <InputLabel htmlFor="filled-adornment-password" color='text' >Password</InputLabel>
               <FilledInput
-              placeholder="sec.."
+                placeholder="sec.."
                 id="filled-adornment-password"
                 type={showPassword ? 'text' : 'password'}
                 color='text'
@@ -81,10 +82,10 @@ const Login = () => {
             </FormControl>
             <div className="old">
               <p style={{
-                 borderBottom: '1px solid white',
-                 paddingBottom: '0.2pc',
-                 cursor: 'pointer',
-                 width: '12.3pc',
+                borderBottom: '1px solid white',
+                paddingBottom: '0.2pc',
+                cursor: 'pointer',
+                width: '12.3pc',
               }}>¿olvidastes tu contraseña?</p>
             </div>
             <div className="btn" style={{ width: '99%', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
@@ -99,7 +100,8 @@ const Login = () => {
                 width: '5pc',
                 paddingBottom: '0.2pc',
                 cursor: 'pointer'
-              }}  onClick={Goregister}>Registrate</p>
+              }} onClick={Goregister}>Registrate</p>
+              <Date />
             </div>
           </form>
         </div>

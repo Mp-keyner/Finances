@@ -16,7 +16,7 @@ function App() {
     palette: {
       mode: 'light',
       primary: {
-        main: '#e9352b',
+        main: '#000',
       },
       secondary: {
         main: '#3435ce',
@@ -29,7 +29,7 @@ function App() {
       }
     },
   })
- 
+
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
