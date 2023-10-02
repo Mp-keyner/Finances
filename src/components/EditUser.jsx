@@ -16,6 +16,7 @@ import { motion } from "framer-motion";
 import xClose from "../img/xClose.svg";
 import menu from "../img/Menu.svg";
 import { Link, useNavigate } from "react-router-dom";
+import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 
 const Generar = () => {
   const navigate = useNavigate();
@@ -27,6 +28,10 @@ const Generar = () => {
   const GoUsert = () => {
     // Redirigir al usuario a otra parte
     navigate("/result-admin");
+  };
+  const [age, setAge] = React.useState('');
+  const handleChange = (event) => {
+    setAge(event.target.value);
   };
   const [manu, setManu] = useState(false);
   const ShowMenu = () => {
@@ -81,22 +86,18 @@ const Generar = () => {
             </div>
             <div>
               <p>Licencias</p>
-              <div className="user  ActivoHver" title="Generar Codigo">
+              <div className="user ActivoHver" title="Generar Codigo">
                 <img src={edit} alt="" />
                 <p>Generar Codigo</p>
               </div>
-              <div className="book ActivoHver" title="Administrar Codigos">
-                <img src={key} alt="" />
-                <p>Administrar Codigos</p>
-              </div>
+              <Link to={"/admin-list"}>
+                <div className="book ActivoHver" title="Administrar Codigos">
+                  <img src={key} alt="" />
+                  <p>Administrar Codigos</p>
+                </div>
+              </Link>
             </div>
-            <div>
-              <p>Reportes</p>
-              <div className="user ActivoHver" title="Generar PDF">
-                <img src={file} alt="" />
-                <p>Generar PDF</p>
-              </div>
-            </div>
+
           </div>
         </div>
         <div className="rigthAdmin">
@@ -111,49 +112,71 @@ const Generar = () => {
           </div>
           <div className="containerGenerar">
             <form action="">
-              <label htmlFor="">
-                <span>Nombre</span>
-                <input
-                  type="text"
-                  placeholder="Juanito Perez Diaz"
-                  className="inou"
-                  required
-                />
-              </label>
-              <label htmlFor="">
-                <span>Email</span>
-                <input
-                  type="text"
-                  required
-                  placeholder="Juanito Perez Diaz"
-                  className="inou"
-                />
-              </label>
-              <label htmlFor="">
-                <span>Universidad</span>
-                <select name="" id="" title="Seleciona Universidad">
-                  <option value="">Seleciona una opcion</option>
-                </select>
-              </label>
-              <label htmlFor="">
-                <span>Codigo de usuario</span>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="7G8SD89SJJSAK8FS97F8A09AC"
-                  className="inou"
-                  disabled
-                  title="Codigo de usuario"
-                />
-              </label>
+              <TextField id="outlined-basic" label="Nombre" placeholder="Juanito Perez Diaz" variant="outlined" sx={{
+                width: '20pc'
+              }} />
+              <TextField id="outlined-basic" label="Email" placeholder="JuanitoPerezDiaz@" variant="outlined" sx={{
+                width: '20pc'
+              }} />
+
+              <FormControl fullWidth variant="filled" sx={{
+                width: '20pc',
+                borderRadius: '5px 5px 0 0',
+                backgroundColor: 'transparent',
+                '&::before': {
+                  borderBottom: '2px solid red'
+                },
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                },
+                '& div': {
+                  border: '1px solid #c4c4c4'
+                },
+                '& div div': {
+                  border: 'none'
+                },
+                '&:focus': {
+                  backgroundColor: 'transparent',
+                  borderBottom: 'none'
+                },
+                '&.Mui-focused': {
+                  backgroundColor: 'transparent',
+                },
+                '& div:hover': {
+                  backgroundColor: 'transparent',
+                },
+                '& div:focus': {
+                  backgroundColor: 'transparent',
+                },
+
+              }}>
+                <InputLabel id="demo-simple-select-label" color='text'
+
+                >Selecciona tu Universidad</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={age}
+                  label="Selecciona tu Universidad"
+                  onChange={handleChange}
+                  color="text"
+
+                >
+                  <MenuItem value={10}>Universidad 1</MenuItem>
+                  <MenuItem value={20}>Universidad 2</MenuItem>
+                  <MenuItem value={30}>Universidad 3</MenuItem>
+                </Select>
+              </FormControl>
+              <TextField helperText="Este es tu cdigo de usuario" variant="outlined" label="codigo de usuario" autoComplete="off" disabled value={'14323..'} sx={{
+                width: '20pc'
+              }} />
               <label htmlFor="" className="btns">
-                <button className="bt" onClick={GoUsert}>
+                <Button className="bt" onClick={GoUsert}>
                   Guardar
-                </button>
-                <button className="bt" onClick={GoUsert}>
+                </Button>
+                <Button className="bt" onClick={GoUsert}>
                   Cancelar
-                </button>
+                </Button>
               </label>
             </form>
           </div>

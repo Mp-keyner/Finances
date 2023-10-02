@@ -18,6 +18,7 @@ import xClose from "../img/xClose.svg";
 import menu from "../img/Menu.svg";
 import { Link, useNavigate } from "react-router-dom";
 import repetir from "../img/repeat.svg";
+import Renovar from "./Renovar";
 
 const ResultsAdmin = () => {
   const navigate = useNavigate();
@@ -39,6 +40,11 @@ const ResultsAdmin = () => {
   const Delete = () => {
     setModal(!modal);
     console.log("delete");
+  };
+  const [renovar, setRenovar] = useState(false);
+  const RenovarF = () => {
+    setRenovar(!renovar);
+    console.log("renovar");
   };
   return (
     <motion.div
@@ -141,7 +147,7 @@ const ResultsAdmin = () => {
                         onClick={Delete}
                         title="Eliminar"
                       />
-                      <img src={repetir} alt="" title="renovar " />
+                      <img src={repetir} alt="" title="renovar " onClick={RenovarF} />
                     </div>
                   </td>
                 </tr>
@@ -164,7 +170,7 @@ const ResultsAdmin = () => {
                         onClick={Delete}
                         title="Editar"
                       />
-                      <img src={repetir} alt="" title="renovar " />
+                      <img src={repetir} alt="" title="renovar " onClick={RenovarF} />
                     </div>
                   </td>
                 </tr>
@@ -187,7 +193,12 @@ const ResultsAdmin = () => {
                         onClick={Delete}
                         title="Editar"
                       />
-                      <img src={repetir} alt="" title="renovar " />
+                      <img
+                        src={repetir}
+                        alt=""
+                        title="renovar "
+                        onClick={RenovarF}
+                      />
                     </div>
                   </td>
                 </tr>
@@ -196,6 +207,7 @@ const ResultsAdmin = () => {
           </div>
         </div>
         {modal && <Modal delete={Delete} />}
+        {renovar && <Renovar RenovarF={RenovarF} />}
       </section>
     </motion.div >
   );

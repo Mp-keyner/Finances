@@ -5,7 +5,6 @@ import user1 from "../img/user.svg";
 import book from "../img/book2.svg";
 import edit from "../img/edit.svg";
 import editB from "../img/edit-black.svg";
-import file from "../img/file.svg";
 import key from "../img/key.svg";
 import goOut from "../img/goOut.svg";
 import Lupa from "../img/Lupa.svg";
@@ -17,6 +16,7 @@ import xClose from "../img/xClose.svg";
 import menu from "../img/Menu.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
+import AddUni from "./AddUni";
 
 const AdminUni = () => {
   const navigate = useNavigate();
@@ -33,6 +33,11 @@ const AdminUni = () => {
   const [modal, setModal] = useState(false);
   const Delete = () => {
     setModal(!modal);
+    console.log("delete");
+  };
+  const [addUni, setaddUni] = useState(false);
+  const Adduni = () => {
+    setaddUni(!addUni);
     console.log("delete");
   };
   return (
@@ -121,7 +126,9 @@ const AdminUni = () => {
                   background: '#fff',
                   color: '#0aff06',
                   border: '1px solid #0aff06'
-                }}>Agregar</Button>
+                }}
+                  onClick={Adduni}
+                >Agregar</Button>
               </div>
               <table>
                 <tr>
@@ -135,7 +142,7 @@ const AdminUni = () => {
                   <td>Universidad Autonoma Del Caribe</td>
                   <td>
                     <div className="iconTable">
-                      <img src={editB} alt="Editar" title="Editar" />
+                      <img src={editB} alt="Editar" title="Editar" onClick={() => navigate('/admin-edit')} />
                       <img
                         src={Basura}
                         alt="Eliminar"
@@ -150,7 +157,7 @@ const AdminUni = () => {
                   <td>Universidad Autonoma Del Caribe</td>
                   <td>
                     <div className="iconTable">
-                      <img src={editB} alt="Editar" title="Editar" />
+                      <img src={editB} alt="Editar" title="Editar" onClick={() => navigate('/admin-edit')} />
                       <img
                         src={Basura}
                         alt="Eliminar"
@@ -165,7 +172,7 @@ const AdminUni = () => {
                   <td>Universidad Autonoma Del Caribe</td>
                   <td>
                     <div className="iconTable">
-                      <img src={editB} alt="Editar" title="Editar" />
+                      <img src={editB} alt="Editar" title="Editar" onClick={() => navigate('/admin-edit')} />
                       <img
                         src={Basura}
                         alt="Eliminar"
@@ -180,6 +187,7 @@ const AdminUni = () => {
           </div>
         </div>
         {modal && <Modal delete={Delete} />}
+        {addUni && <AddUni addUni={Adduni} />}
       </section>
     </motion.div>
   );

@@ -16,6 +16,10 @@ const Login = () => {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+  const GoMain = () => {
+    // Redirigir al usuario a otra parte
+    navigate("/MainUser");
+  };
   const Goregister = () => {
     // Redirigir al usuario a otra parte
     navigate("/register");
@@ -92,7 +96,9 @@ const Login = () => {
               <Button size="medium" variant="contained"
                 sx={{
                   width: '100%'
-                }}>Iniciar Sesión</Button>
+                }}
+                onClick={GoMain}
+              >Iniciar Sesión</Button>
               <p style={{
                 fontSize: '1pc',
                 margin: '1pc',

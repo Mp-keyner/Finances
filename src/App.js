@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Generar from "./components/GenerarCodigo";
 import AdminList from "./components/AgragarList";
 import { ThemeProvider, createTheme } from "@mui/material";
+import Renovar from "./components/Renovar";
+import MainUser from "./components/MainUser";
 
 function App() {
 
@@ -42,6 +44,8 @@ function App() {
           <Route path="/admin-edit" element={<EditUser />} />
           <Route path="/Generar" element={<Generar />} />
           <Route path="/admin-list" element={<AdminList />} />
+          <Route path="/MainUser" element={<MainUser />} />
+          <Route path="*" element={<Generar />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

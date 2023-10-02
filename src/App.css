@@ -610,7 +610,7 @@ form label select {
   }
 
   .containerModal {
-    width: 27pc;
+    width: 100%;
   }
 
   .xClose {
