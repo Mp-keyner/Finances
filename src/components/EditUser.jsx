@@ -11,7 +11,6 @@ import key from "../img/key.svg";
 import goOut from "../img/goOut.svg";
 import Lupa from "../img/Lupa.svg";
 import UserCircle from "../img/UserCircle.svg";
-import Basura from "../img/Basura.svg";
 import Modal from "./Modal";
 import { motion } from "framer-motion";
 import xClose from "../img/xClose.svg";
@@ -19,9 +18,6 @@ import menu from "../img/Menu.svg";
 import { Link, useNavigate } from "react-router-dom";
 
 const Generar = () => {
-  const [date, setDate] = useState("");
-  const [date2, setDate2] = useState("");
-  console.log(date);
   const navigate = useNavigate();
 
   const GoMain = () => {
@@ -51,10 +47,7 @@ const Generar = () => {
     >
       <section className="containerAdmin">
         <div
-          className="leftAdmin"
-          style={{
-            transform: `translateX(${manu ? "-19pc" : "0pc"})`,
-          }}
+          className={manu ? "leftAdmin show" : "leftAdmin hiden"}
         >
           <img
             src={xClose}

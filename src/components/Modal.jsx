@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React from "react";
 
 const Modal = (props) => {
@@ -13,12 +14,15 @@ const Modal = (props) => {
           </p>
           <hr />
           <div>
-            <button className="btnTrue" onClick={props.delete}>
+            <Button className="btnTrue" onClick={props.delete}>
               Cancelar
-            </button>
-            <button className="btnClose" onClick={props.delete}>
+            </Button>
+            <Button onClick={props.delete} sx={{
+              border: '1px solid red',
+              color: 'red'
+            }}>
               Eliminar ahora
-            </button>
+            </Button>
           </div>
         </div>
       </div>

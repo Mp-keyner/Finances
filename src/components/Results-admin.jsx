@@ -49,10 +49,7 @@ const ResultsAdmin = () => {
     >
       <section className="containerAdmin">
         <div
-          className="leftAdmin"
-          style={{
-            transform: `translateX(${manu ? "-19pc" : "0pc"})`,
-          }}
+          className={manu ? "leftAdmin show" : "leftAdmin hiden"}
         >
           <img
             src={xClose}
@@ -86,21 +83,18 @@ const ResultsAdmin = () => {
             </div>
             <div>
               <p>Licencias</p>
-              <div className="user ActivoHver " title="Generar Codigo">
-                <img src={edit} alt="" />
-                <p>Generar Codigo</p>
-              </div>
-              <div className="book ActivoHver" title="Administrar Codigos">
-                <img src={key} alt="" />
-                <p>Administrar Codigos</p>
-              </div>
-            </div>
-            <div>
-              <p>Reportes</p>
-              <div className="user ActivoHver" title="Generar PDF">
-                <img src={file} alt="" />
-                <p>Generar PDF</p>
-              </div>
+              <Link to={"/admin-list"}>
+                <div className="user ActivoHver " title="Generar Codigo">
+                  <img src={edit} alt="" />
+                  <p>Generar Codigo</p>
+                </div>
+              </Link>
+              <Link to={"/admin-list"}>
+                <div className="book ActivoHver" title="Administrar Codigos">
+                  <img src={key} alt="" />
+                  <p>Administrar Codigos</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -114,7 +108,10 @@ const ResultsAdmin = () => {
               <img src={goOut} alt="" />
             </div>
           </div>
-          <div className="lefAdmi">
+          <div className="lefAdmi" style={{
+            gridTemplateColumns: '1fr',
+            justifyItems: 'center'
+          }}>
             <div className="containerResults">
               Lista de usuarios
               <table>
@@ -200,7 +197,7 @@ const ResultsAdmin = () => {
         </div>
         {modal && <Modal delete={Delete} />}
       </section>
-    </motion.div>
+    </motion.div >
   );
 };
 

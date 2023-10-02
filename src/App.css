@@ -595,6 +595,14 @@ form label select {
   background: rgb(6, 164, 6);
 }
 
+.show {
+  transform: translateX(0pc);
+}
+
+.hiden {
+  transform: translateX(0pc);
+}
+
 @media screen and (max-width: 768px) {
   .containerRegister {
     flex-direction: column;
@@ -648,6 +656,7 @@ form label select {
     position: absolute;
     width: 70%;
     transition: all 0.5s ease-in-out;
+    z-index: 10;
   }
 
   .lefAdmi {
@@ -676,11 +685,19 @@ form label select {
   }
 
   .rigthAdmin {
-    width: 100%;
+    width: 92%;
   }
 
   .lefAd {
     grid-template-columns: 1fr;
     padding-bottom: 3pc;
+  }
+
+  .show {
+    transform: translateX(0pc);
+  }
+
+  .hiden {
+    transform: translateX(-19pc);
   }
 }

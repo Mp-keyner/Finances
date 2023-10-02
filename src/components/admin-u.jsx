@@ -16,8 +16,9 @@ import { motion } from "framer-motion";
 import xClose from "../img/xClose.svg";
 import menu from "../img/Menu.svg";
 import { Link, useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 
-const AdminUni = () => { 
+const AdminUni = () => {
   const navigate = useNavigate();
 
   const GoMain = () => {
@@ -43,10 +44,7 @@ const AdminUni = () => {
     >
       <section className="containerAdmin">
         <div
-          className="leftAdmin"
-          style={{
-            transform: `translateX(${manu ? "-19pc" : "0pc"})`,
-          }}
+          className={manu ? "leftAdmin show" : "leftAdmin hiden"}
         >
           <img
             src={xClose}
@@ -86,17 +84,12 @@ const AdminUni = () => {
                   <p>Generar Codigo</p>
                 </div>
               </Link>
-              <div className="book ActivoHver" title="Administrar Codigos">
-                <img src={key} alt="" />
-                <p>Administrar Codigos</p>
-              </div>
-            </div>
-            <div>
-              <p>Reportes</p>
-              <div className="user ActivoHver" title="Generar PDF">
-                <img src={file} alt="" />
-                <p>Generar PDF</p>
-              </div>
+              <Link to={"/admin-list"}>
+                <div className="book ActivoHver" title="Administrar Codigos">
+                  <img src={key} alt="" />
+                  <p>Administrar Codigos</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -110,13 +103,25 @@ const AdminUni = () => {
               <img src={goOut} alt="" />
             </div>
           </div>
-          <div className="lefAdmi">
+          <div className="lefAdmi" style={{
+            gridTemplateColumns: '1fr',
+            justifyItems: 'center',
+            paddingTop: '1pc'
+          }}>
             <div className="containerResults">
               <div className="centrarLados" style={{
                 width: '100%',
               }}>
                 <p> Lista de universidades</p>
-                <button className="btnGreen">Agregar</button>
+                <Button variant="contained" sx={{
+                  '&:hover': {
+                    // background: '#0aff06',
+                    background: 'transparent',
+                  },
+                  background: '#fff',
+                  color: '#0aff06',
+                  border: '1px solid #0aff06'
+                }}>Agregar</Button>
               </div>
               <table>
                 <tr>

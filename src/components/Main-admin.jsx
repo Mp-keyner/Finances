@@ -43,10 +43,7 @@ const MainAdmin = () => {
     >
       <section className="containerAdmin">
         <div
-          className="leftAdmin"
-          style={{
-            transform: `translateX(${manu ? "-19pc" : "0pc"})`,
-          }}
+          className={manu ? "leftAdmin show" : "leftAdmin hiden"}
         >
           <img
             src={xClose}
@@ -80,21 +77,18 @@ const MainAdmin = () => {
             </div>
             <div>
               <p>Licencias</p>
-              <div className="user ActivoHver " title="Generar Codigo">
-                <img src={edit} alt="" />
-                <p>Generar Codigo</p>
-              </div>
-              <div className="book ActivoHver" title="Administrar Codigos">
-                <img src={key} alt="" />
-                <p>Administrar Codigos</p>
-              </div>
-            </div>
-            <div>
-              <p>Reportes</p>
-              <div className="user ActivoHver" title="Generar PDF">
-                <img src={file} alt="" />
-                <p>Generar PDF</p>
-              </div>
+              <Link to={"/Generar"}>
+                <div className="user ActivoHver " title="Generar Codigo">
+                  <img src={edit} alt="" />
+                  <p>Generar Codigo</p>
+                </div>
+              </Link>
+              <Link to={"/admin-list"}>
+                <div className="book ActivoHver" title="Administrar Codigos">
+                  <img src={key} alt="" />
+                  <p>Administrar Codigos</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
