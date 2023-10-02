@@ -34,6 +34,15 @@ const Nav = () => {
                         }}
                     />
                     <Box sx={{ ...Space, display: { xs: 'none', sm: 'flex' } }}>
+                        <Button sx={Space} href="/Admin">
+                            <Typography component='p' color='secondary' sx={{
+                                fontWeight: 700,
+                                height: '1.3pc',
+                                color: 'white'
+                            }}>
+                                Admin
+                            </Typography>
+                        </Button>
                         <Button sx={Space}>
                             <Typography component='p' color='secondary' sx={{
                                 fontWeight: 700,

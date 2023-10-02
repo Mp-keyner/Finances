@@ -46,6 +46,16 @@ const NavDrawer = () => {
                         gap: '1pc'
                     }}>
                         <ListItem disablePadding>
+                            <ListItemButton component='a' href="/Admin" sx={Space}>
+                                <Typography component='p' sx={{
+                                    fontWeight: 700,
+                                    height: '1.3pc'
+                                }}>
+                                    Admin
+                                </Typography>
+                            </ListItemButton>
+                        </ListItem>
+                        <ListItem disablePadding>
                             <ListItemButton component='a' href="#keyner" sx={Space}>
                                 <Typography component='p' sx={{
                                     fontWeight: 700,
