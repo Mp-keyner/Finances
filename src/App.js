@@ -11,6 +11,7 @@ import AdminList from "./components/AgragarList";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Renovar from "./components/Renovar";
 import MainUser from "./components/MainUser";
+import NotFound from "./components/404";
 
 function App() {
 
@@ -45,7 +46,7 @@ function App() {
           <Route path="/Generar" element={<Generar />} />
           <Route path="/admin-list" element={<AdminList />} />
           <Route path="/MainUser" element={<MainUser />} />
-          <Route path="*" element={<Generar />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
