@@ -17,9 +17,9 @@ const NavDrawer = () => {
             boxShadow: 'rgba(0, 0, 0, 0.2) 0px 8px 10px -5px, rgba(0, 0, 0, 0.14) 0px 16px 24px 2px, rgba(0, 0, 0, 0.12) 0px 6px 30px 5px'
         }}>
             <Box sx={{
-                background: theme.palette.background.secondary,
+                background: 'white',
                 width: '15.6pc',
-                height: '100vh'
+                height: '100vh',
             }}>
                 <Box component='nav' sx={{
                     background: '#3435ce',
@@ -39,11 +39,13 @@ const NavDrawer = () => {
                     />
                 </Box>
                 <Divider />
-                <Box component='nav' >
+                <Box component='nav' sx={{
+                    background: 'white'
+                }}>
                     <List sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: '1pc'
+                        gap: '1pc',
                     }}>
                         <ListItem disablePadding>
                             <ListItemButton component='a' href="/Admin" sx={Space}>
@@ -51,7 +53,7 @@ const NavDrawer = () => {
                                     fontWeight: 700,
                                     height: '1.3pc'
                                 }}>
-                                    Admin
+                                    ADMIN
                                 </Typography>
                             </ListItemButton>
                         </ListItem>
@@ -61,7 +63,7 @@ const NavDrawer = () => {
                                     fontWeight: 700,
                                     height: '1.3pc'
                                 }}>
-                                    Inicio
+                                    INICIO
                                 </Typography>
                             </ListItemButton>
                         </ListItem>
@@ -71,7 +73,7 @@ const NavDrawer = () => {
                                     fontWeight: 700,
                                     height: '1.3pc'
                                 }}>
-                                    Nuevo estudio
+                                    NUEVO ESTUDIO
                                 </Typography>
                             </ListItemButton>
                         </ListItem>
@@ -81,7 +83,7 @@ const NavDrawer = () => {
                                     fontWeight: 700,
                                     height: '1.3pc'
                                 }}>
-                                    Ver estudio
+                                    VER ESTUDIO
                                 </Typography>
                             </ListItemButton>
                         </ListItem>

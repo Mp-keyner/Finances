@@ -40,9 +40,13 @@ const Register = () => {
       <section className="containerRegister">
         <div className="right-register">
           <img src={logo} alt="" className="logo" onClick={GoMain} />
-          <h1>Iniciar Sesion</h1>
+          <h1 style={{
+            margin: '1pc 0',
+            textAlign: 'start',
+            width: '100%'
+          }}>Registrate</h1>
           <form className="form-register">
-          <TextField variant="filled" placeholder="Pedro.." label='Nombre Completo ' color="textLight"  sx={{
+            <TextField variant="filled" placeholder="Pedro.." label='Nombre Completo ' color="textLight" sx={{
               background: 'white',
               borderRadius: '5px 5px 0 0',
               width: '100%',
@@ -53,7 +57,7 @@ const Register = () => {
                 backgroundColor: 'white',
               },
             }} />
-          <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="textLight"  sx={{
+            <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="textLight" sx={{
               background: 'white',
               borderRadius: '5px 5px 0 0',
               width: '100%',
@@ -64,11 +68,11 @@ const Register = () => {
                 backgroundColor: 'white',
               },
             }} />
-          
-          <FormControl fullWidth variant="filled" color='text'>
+
+            <FormControl fullWidth variant="filled" color='text'>
               <InputLabel htmlFor="filled-adornment-password" color='text' >Password</InputLabel>
               <FilledInput
-              placeholder="sec.."
+                placeholder="sec.."
                 id="filled-adornment-password"
                 type={showPassword ? 'text' : 'password'}
                 color='text'
@@ -98,7 +102,7 @@ const Register = () => {
                 }}
               />
             </FormControl>
-            <TextField variant="filled" placeholder="13643..." label='Ingresa el Codigo de Registro' color="textLight"  sx={{
+            <TextField variant="filled" placeholder="13643..." label='Ingresa el Codigo de Registro' color="textLight" sx={{
               background: 'white',
               borderRadius: '5px 5px 0 0',
               width: '100%',
@@ -109,21 +113,21 @@ const Register = () => {
                 backgroundColor: 'white',
               },
             }} />
-            <FormControl fullWidth variant="filled"   sx={{
-                  borderRadius: '5px 5px 0 0',
-                  backgroundColor: 'white',
-                  '&:hover': {
-                    backgroundColor: 'white',
-                  },
-                  '&:focus': {
-                    backgroundColor: 'white',
-                  },
-                  '&.Mui-focused': {
-                    backgroundColor: 'white',
-                  },
-                }}>
+            <FormControl fullWidth variant="filled" sx={{
+              borderRadius: '5px 5px 0 0',
+              backgroundColor: 'white',
+              '&:hover': {
+                backgroundColor: 'white',
+              },
+              '&:focus': {
+                backgroundColor: 'white',
+              },
+              '&.Mui-focused': {
+                backgroundColor: 'white',
+              },
+            }}>
               <InputLabel id="demo-simple-select-label" color='text'
-                
+
               >Selecciona tu Universidad</InputLabel>
               <Select
                 labelId="demo-simple-select-label"

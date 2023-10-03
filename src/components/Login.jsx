@@ -38,7 +38,11 @@ const Login = () => {
         </div>
         <div className="right">
           <img src={logo} alt="" className="logo" />
-          <h1>Iniciar Sesion</h1>
+          <h1 style={{
+            margin: '1pc 0',
+            textAlign: 'start',
+            width: '100%'
+          }}>Iniciar Sesion</h1>
           <form className="form">
             <TextField variant="filled" placeholder="Example@g..." label='Ingresa tu Email' color="text" sx={{
               background: 'white',
@@ -107,7 +111,6 @@ const Login = () => {
                 paddingBottom: '0.2pc',
                 cursor: 'pointer'
               }} onClick={Goregister}>Registrate</p>
-              <Date />
             </div>
           </form>
         </div>
